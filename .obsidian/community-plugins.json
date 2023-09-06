@@ -1,6 +1,7 @@
 [
   "table-editor-obsidian",
-  "cm-editor-syntax-highlight-obsidian",
   "highlightr-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-outliner",
+  "cm-editor-syntax-highlight-obsidian"
 ]

@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "591eece7377f0c90",
+        "id": "c896af5b704feb71",
         "type": "tabs",
         "children": [
           {
-            "id": "eb243aa76bc5d86e",
+            "id": "968a83bd61d34c3c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Блок 1.3. Построение сеток + БЭМ именование.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "1e863ce63703f94b",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Блок 1.3. Построение сеток + БЭМ именование.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Блок 1.3. Построение сеток + БЭМ именование.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,14 +124,25 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "Блок 1.3. Построение сеток + БЭМ именование.md"
+              }
+            }
+          },
+          {
+            "id": "bf14ddb8a211206d",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -133,11 +150,19 @@
       "switcher:Меню быстрого перехода": false,
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "eb243aa76bc5d86e",
-  "lastOpenFiles": []
+  "active": "968a83bd61d34c3c",
+  "lastOpenFiles": [
+    "Pasted image 20230906043745.png",
+    "Pasted image 20230906043734.png",
+    "Без названия.md",
+    "Блок 1.3. Построение сеток + БЭМ именование.md",
+    "\"a\", 1], [\"b\", 2], [\"c\", 3.md",
+    "Archive/Tags.md",
+    "Archive",
+    "2023-09-06.md"
+  ]
 }
