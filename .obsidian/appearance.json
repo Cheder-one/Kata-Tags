@@ -1,4 +1,9 @@
 {
   "accentColor": "",
-  "baseFontSize": 16
+  "baseFontSize": 15,
+  "theme": "system",
+  "cssTheme": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "Fira Code",
+  "interfaceFontFamily": ""
 }

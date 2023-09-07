@@ -1,5 +1,9 @@
 {
   "smartIndentList": true,
   "promptDelete": false,
-  "tabSize": 2
+  "tabSize": 2,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "/",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "props"
 }
