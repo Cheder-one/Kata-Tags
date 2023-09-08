@@ -22,19 +22,54 @@
             }
           },
           {
-            "id": "2169998c390f1975",
+            "id": "601f812eae9ad5f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/max-width & max-height.md",
+                "file": "props/flex.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "379b1802cd8850cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/justify-content.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ebc697c2f3e6cab0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/align-items.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7047deb0e847dbc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/row & col.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/max-width & max-height.md",
+                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/max-width & max-height.md",
+                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/max-width & max-height.md"
+                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md"
               }
             }
           },
@@ -166,29 +201,32 @@
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
       "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false,
-      "open-vscode:VSCode": false
+      "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "2169998c390f1975",
+  "active": "479bb40ef5c9fc03",
   "lastOpenFiles": [
+    "props/flex.md",
     "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "props/justify-content.md",
+    "props/align-items.md",
+    "props/row & col.md",
+    "props/flex-direction.md",
+    "props/Без названия.md",
+    "archive/Tags.md",
+    "props/margin꞉ auto.md",
     "props/max-width & max-height.md",
+    "props/꞉nth-child().md",
     "props/grid-column & grid-row.md",
     "props/block & inline-block.md",
-    "props/margin꞉ auto.md",
     "props/align-self.md",
     "props/box-sizing.md",
-    "props/flex.md",
     "assets/Pasted image 20230907233742.png",
     "assets/Pasted image 20230907234235.png",
-    "props/flex-direction.md",
     "assets/Pasted image 20230907232715.png",
     "assets/Pasted image 20230907232654.png",
-    "props/align-items.md",
     "props/order.md",
     "assets/Pasted image 20230907210902.png",
-    "props/꞉nth-child().md",
     "assets/Pasted image 20230907202508.png",
     "props/grid-template-columns.md",
     "props/grid-auto-flow.md",
@@ -201,7 +239,6 @@
     "props/vertical-align.md",
     "Blocks",
     "assets/Pasted image 20230906043734.png",
-    "props/justify-content.md",
     "props/reset css.md",
     "props",
     "Без названия 1",
@@ -210,8 +247,6 @@
     "Pasted image 20230906043734.png.md",
     "assets",
     "\"a\", 1], [\"b\", 2], [\"c\", 3.md",
-    "archive/Tags.md",
-    "archive",
-    "2023-09-06.md"
+    "archive"
   ]
 }
