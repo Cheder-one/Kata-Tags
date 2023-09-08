@@ -3,5 +3,6 @@
   "highlightr-plugin",
   "obsidian-outliner",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-editor-shortcuts"
+  "obsidian-editor-shortcuts",
+  "open-vscode"
 ]

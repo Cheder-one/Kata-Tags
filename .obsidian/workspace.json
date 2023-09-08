@@ -22,54 +22,43 @@
             }
           },
           {
-            "id": "601f812eae9ad5f1",
+            "id": "b2be1237c1138181",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/flex.md",
+                "file": "props/inline-block.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "379b1802cd8850cb",
+            "id": "c3c03a755917f97e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/justify-content.md",
+                "file": "props/bem.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ebc697c2f3e6cab0",
+            "id": "3925b735784696f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/align-items.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7047deb0e847dbc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/row & col.md",
+                "file": "props/@media.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -135,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+                "file": "props/@media.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+                "file": "props/@media.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md"
+                "file": "props/@media.md"
               }
             }
           },
@@ -201,51 +190,55 @@
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
       "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false
+      "command-palette:Открыть палитру команд": false,
+      "open-vscode:VSCode": false
     }
   },
-  "active": "479bb40ef5c9fc03",
+  "active": "681b0b7134b7e1e2",
   "lastOpenFiles": [
-    "s",
-    "props/flex.md",
+    "assets/Pasted image 20230909012310.png",
+    "props/bem.md",
+    "props/@media.md",
+    "props/inline-block.md",
     "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "props/float.md",
+    "props/Псевдоэлементы/псевдоэлементы.md",
+    "props/flex.md",
+    "props/Псевдоклассы/꞉hover.md",
+    "props/Псевдоклассы/псевдоклассы.md",
+    "props/inherit.md",
+    "props/Псевдоэлементы",
+    "props/Псевдоклассы/꞉first-child & ꞉last-child.md",
+    "props/Псевдоклассы/꞉link ꞉visited ꞉active.md",
+    "props/Псевдоклассы/꞉nth-child().md",
+    "props/Псевдоклассы",
+    "props/reset css.md",
+    "props/box-sizing.md",
+    "props/align-self.md",
+    "props/justify-self (grid-only).md",
     "props/justify-content.md",
+    "props/grid-template-areas.md",
+    "assets/Pasted image 20230908192533.png",
+    "assets/Pasted image 20230908183107.png",
+    "props/order.md",
+    "s",
     "props/align-items.md",
     "props/row & col.md",
     "props/flex-direction.md",
-    "props/Без названия.md",
     "archive/Tags.md",
     "props/margin꞉ auto.md",
-    "props/max-width & max-height.md",
-    "props/꞉nth-child().md",
-    "props/grid-column & grid-row.md",
-    "props/block & inline-block.md",
-    "props/align-self.md",
-    "props/box-sizing.md",
     "assets/Pasted image 20230907233742.png",
     "assets/Pasted image 20230907234235.png",
     "assets/Pasted image 20230907232715.png",
     "assets/Pasted image 20230907232654.png",
-    "props/order.md",
     "assets/Pasted image 20230907210902.png",
     "assets/Pasted image 20230907202508.png",
-    "props/grid-template-columns.md",
-    "props/grid-auto-flow.md",
-    "props/flex-wrap.md",
-    "props/gap.md",
     "assets/Pasted image 20230907150723.png",
     "assets/Pasted image 20230907150505.png",
-    "props/auto-fit.md",
-    "Без названия.md",
-    "props/vertical-align.md",
     "Blocks",
-    "assets/Pasted image 20230906043734.png",
-    "props/reset css.md",
     "props",
     "Без названия 1",
-    "assets/Pasted image 20230906043745.png",
     "assets",
-    "Pasted image 20230906043734.png.md",
     "assets",
     "archive"
   ]
