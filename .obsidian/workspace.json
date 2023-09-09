@@ -46,18 +46,6 @@
             }
           },
           {
-            "id": "f7eb259849a4bce8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/Без названия.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "18086b9946deecd4",
             "type": "leaf",
             "state": {
@@ -70,7 +58,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -136,7 +124,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/Без названия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +140,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/Без названия.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +199,7 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "f7eb259849a4bce8",
+  "active": "681b0b7134b7e1e2",
   "lastOpenFiles": [
     "props/@media.md",
     "props/Без названия.md",
