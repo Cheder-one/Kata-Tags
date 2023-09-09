@@ -46,6 +46,18 @@
             }
           },
           {
+            "id": "f7eb259849a4bce8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/Без названия.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "18086b9946deecd4",
             "type": "leaf",
             "state": {
@@ -58,7 +70,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -124,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/@media.md",
+                "file": "props/Без названия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/@media.md",
+                "file": "props/Без названия.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/@media.md"
+                "file": "props/Без названия.md"
               }
             }
           },
@@ -185,7 +197,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -201,10 +213,11 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "bf14ddb8a211206d",
+  "active": "f7eb259849a4bce8",
   "lastOpenFiles": [
-    "props/0000.md",
     "props/@media.md",
+    "props/Без названия.md",
+    "props/0000.md",
     "props/bem.md",
     "props/@font-face.md",
     "props/text- & font- properties.md",
@@ -238,7 +251,6 @@
     "s",
     "props/align-items.md",
     "props/row & col.md",
-    "props/flex-direction.md",
     "assets/Pasted image 20230907233742.png",
     "assets/Pasted image 20230907234235.png",
     "assets/Pasted image 20230907232715.png",
