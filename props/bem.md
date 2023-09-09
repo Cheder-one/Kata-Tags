@@ -258,18 +258,19 @@
 
 ```
 .about {
-	&__title {
-		/* стили для элемента .about__title */
+  &__title {
+	  /* стили для элемента .about__title */
+  }
+  &__subtitle {
+	  /* стили для элемента .about__subtitle */
 	}
-	&__subtitle {
-		/* стили для элемента .about__subtitle */
+	
+  .title {
+		/* стили для блока .title внутри .about */
 	}
-}
-.title {
-	/* стили для блока .title внутри .about */
-}
-.subtitle {
-	/* стили для блока .subtitle внутри .about */
+  .subtitle {
+	  /* стили для блока .subtitle внутри .about */
+	}
 }
 ```
 
