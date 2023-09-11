@@ -82,7 +82,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+                "file": "props/bem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+                "file": "props/bem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md"
+                "file": "props/bem.md"
               }
             }
           },
@@ -226,10 +226,10 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "f2b39ec1bc1c7f50",
+  "active": "9085bfe2b0fd77cc",
   "lastOpenFiles": [
-    "props/bem.md",
     "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+    "props/bem.md",
     "props/псевдо/꞉псевдоклассы/꞉first-child & ꞉last-child.md",
     "props/@media.md",
     "props/justify-self (grid-only).md",
