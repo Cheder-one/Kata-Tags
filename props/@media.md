@@ -82,8 +82,39 @@
 -> Пример медиа-запроса с комбинированием нескольких условий:
 
 ```
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
 	...
+}
+```
+
+```
+.some-element {
+  /=/ Стили для общих элементов
+	/=/ которые применяются как на mobile, так и на desktop устройствах
+}
+
+/=/ Стили для мобильных устройств (меньше 768px)
+@media screen and (max-width: 768px) {
+  /=/ Скрыть элемент на мобильных устройствах
+  .mobile-hidden-element {
+    display: none;
+  }
+
+  .mobile-specific-element {
+    /=/ Стилизация элемента, специфичная для мобильных устройств
+  }
+}
+
+/=/ Стили для desktop устройств (больше 768px)
+@media screen and (min-width: 769px) {
+  /=/ Скрыть элемент на desktop устройствах
+  .desktop-hidden-element {
+    display: none;
+  }
+
+  .desktop-specific-element {
+    /=/ Стили для desktop элементов
+  }
 }
 ```
 
@@ -309,9 +340,9 @@ p {
 @import url(desktop.css) screen and (min-width: 992px);
 ```
 
-### *Медиа-запрос в JS `matchMedia()`*
+### _Медиа-запрос в JS `matchMedia()`_
 
-`matchMedia()` является методом объекта `window`.  
+`matchMedia()` является методом объекта `window`.
 
 ```
 const mediaQuery = window.matchMedia('(min-width: 768px)');
