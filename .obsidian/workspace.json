@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "57aff716e3d62526",
+            "id": "25e48c3534665ec1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "e872707275b2a376",
+            "id": "6201bb6b8e097fee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+                "file": "props/position.md",
                 "mode": "source",
                 "source": false
               }
@@ -75,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nth",
+                "query": "spacing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,8 +92,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -113,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+                "file": "props/position.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
+                "file": "props/position.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/псевдо/꞉псевдоклассы/꞉nth-child().md"
+                "file": "props/position.md"
               }
             }
           },
@@ -201,12 +200,22 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "e872707275b2a376",
+  "active": "6201bb6b8e097fee",
   "lastOpenFiles": [
-    "props/gradient.md",
-    "props/background.md",
-    "props/box-shadow.md",
     "Blocks/Блок 1.4. Продвинутая стилизация.md",
+    "props/transform.md",
+    "props/background.md",
+    "props/column-count.md",
+    "props/text-overflow.md",
+    "props/111.md",
+    "props/word-wrap.md",
+    "props/text-shadow.md",
+    "props/псевдо/꞉꞉элемент/псевдоэлементы.md",
+    "props/text-indent.md",
+    "props/unicode.md",
+    "props/псевдо/꞉класс/꞉nth-child().md",
+    "props/gradient.md",
+    "props/box-shadow.md",
     "assets/Pasted image 20230914132357.png",
     "assets/Pasted image 20230914131911.png",
     "assets/Pasted image 20230914124344.png",
@@ -223,24 +232,15 @@
     "props/inherit.md",
     "props/width.md",
     "props/bem.md",
-    "props/псевдо/꞉псевдоклассы/꞉nth-child().md",
     "props/emmet.md",
     "props/sass.md",
-    "props/псевдо/꞉псевдоклассы/꞉first-child & ꞉last-child.md",
+    "props/псевдо/꞉класс/꞉first-child & ꞉last-child.md",
     "props/@media.md",
     "props/justify-self (grid-only).md",
     "props/@font-face.md",
-    "props/rem.md",
-    "props/reset css.md",
-    "props/0000.md",
-    "props/text- & font- properties.md",
-    "props/псевдо/꞉꞉псевдоэлементы/псевдоэлементы.md",
-    "props/псевдо/꞉псевдоклассы/псевдоклассы.md",
     "props/псевдо",
-    "props/grid-template-areas.md",
-    "props/inline-block.md",
-    "props/псевдо/꞉꞉псевдоэлементы",
-    "props/псевдо/꞉псевдоклассы",
+    "props/псевдо/꞉꞉элемент",
+    "props/псевдо/꞉класс",
     "s",
     "Blocks",
     "props",

@@ -1,3 +1,20 @@
+### _Составное свойство background_
+
+```
+background: [color] [img] [repeat] [position] [attachment];
+background: red url(example.jpg) no-repeat center fixed;
+
+/* Обозначения:
+  [bc] — background-color
+  [bi] — background-image
+  [br] — background-repeat
+  [bp] — background-position
+  [ba] — background-attachment
+*/
+```
+
+Если какой-то компонент не указан, то берется значение по умолчанию. 
+
 ### _background-color_
 
 Цвета в можно задавать в разных форматах: в шестнадцатеричном (или HEX), в RGB или RGBA, а также с помощью цветовых констант, таких как `red` или `green`.
@@ -106,24 +123,6 @@ background-position:
 
 - `scroll` — фон прокручивается вместе с содержимым. _(по умолчанию)_
 - `fixed` — фон не прокручивается, зафиксирован на одном месте.
-
-### _Составное свойство background_
-
-```
-background: [bc] [bi] [br] [bp] [ba];
-
-background: [bc] red [bi] url(example.jpg) [br] no-repeat [bp] center [ba] fixed;
-
-/* Обозначения:
-  [bc] — background-color
-  [bi] — background-image
-  [br] — background-repeat
-  [bp] — background-position
-  [ba] — background-attachment
-*/
-```
-
-Если какой-то компонент не указан, то берется значение по умолчанию. 
 
 ### *Несколько слоев фона*
 
