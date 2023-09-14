@@ -5,17 +5,19 @@
 - `matrix`: применяет пользовательскую матрицу преобразования к элементу.
 - `perspective`: устанавливает перспективу для 3D преобразований.
 
-1. `translate`: `transform: translate(50px, 100px);`
+1. `transform: translate(50px, 100px);`
     Перемещает элемент на 50 пикселей вправо и на 100 пикселей вниз.
-2. `scale`: `transform: scale(1.5);`
+2. `transform: scale(1.5);`
     Увеличивает размер элемента в 1.5 раза.
-3. `rotate`: `transform: rotate(45deg);`
+3. `transform: rotate(45deg);`
     Вращает элемент на 45 градусов по часовой стрелке.
-4. `skew`: `transform: skew(20deg, -10deg);`
+4. `transform: skew(20deg, -10deg);`
     Наклоняет элемент на 20 градусов по горизонтали и на -10 градусов по вертикали.
-5. `matrix`: `transform: matrix(1, -0.2, 0, 1, 0, 0);`
+5. `transform: matrix(1, -0.2, 0, 1, 0, 0);`
     Применяет пользовательскую матрицу преобразования к элементу.
-6. `perspective`: `transform: perspective(200px);`
+6. `transform: perspective(200px);`
     Устанавливает перспективу для 3D преобразований.
 
+### *transform: translate()*
 
+![[transform꞉ translate()]]
