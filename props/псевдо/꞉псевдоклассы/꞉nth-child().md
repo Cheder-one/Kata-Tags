@@ -9,11 +9,12 @@
 
 ```
 .el :nth-child(2) - выберет 2й элемент
+.el :nth-last-child(2) - 2й элемент С КОНЦА
 .el :nth-child(2n) — выберет каждый 2й (чётные элементы)
 .el :nth-child(n+3) - ВСЕ ПОСЛЕ 3го (включительно 3й)
 
 .el :nth-child(-n+3) - ПЕРВЫЕ ТРИ элемента 
-.el :last-child:nth-last-child(-n+3) - последние три элемента 
+.el :last-child:nth-last-child(-n+3) - ПОСЛЕДНИЕ ТРИ элемента 
 .el :nth-child(n+3):nth-child(-n+6) - диапазон от 3 до 6
 
 .parent > * {} - выберет все дочерние элементы ПЕРВОГО УРОВНЯ
