@@ -35,7 +35,7 @@
 Добавляем контент (распорки), после элемента к которому присвоили класс `clearfix`
 
 ```
-.clearfix::after {
+.container .clearfix::after {
   content: "";
   display: table;
   clear: both;

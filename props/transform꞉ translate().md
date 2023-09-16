@@ -39,7 +39,7 @@
 
 Оба элементы сдвинуты от левого края на 50%. Левый край красного квадрата сдвинут на 50% от края родительского контейнера. Левый край голубого квадрата сдвинут на 100px от левого края родительского контейнера. 50% от 200px будет 100px. Если задать процентное значение в свойстве translate, значение вычисляется относительно ширины или высоты элемента.
 
-<div style="border: solid gray;">
+<div class="container" style="border: solid gray;">
 <div class="box position" style="
 	width: 50px;
   height: 50px;
@@ -55,6 +55,9 @@
 </div>
 
 ```
+.container {
+	border: solid gray;
+}
 .box {
   width: 200px;
   height: 200px;
@@ -65,7 +68,7 @@
   background: red;
 }
 .transform {
-  transform: translateX(50%); // Сдвинется на 100px
+  transform: translateX(50%); // Сдвинется на 100px (половина своей ширины)
   background: blue;
 }
 ```

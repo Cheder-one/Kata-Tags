@@ -22,12 +22,12 @@
             }
           },
           {
-            "id": "94e619ae8c7c4998",
+            "id": "5d499906521e18e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+                "file": "props/transition.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+                "file": "props/transition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+                "file": "props/transition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md"
+                "file": "props/transition.md"
               }
             }
           },
@@ -188,44 +188,44 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "94e619ae8c7c4998",
+  "active": "5d499906521e18e2",
   "lastOpenFiles": [
-    "props/vendor prefixes.md",
+    "props/transform꞉ translate().md",
+    "props/transform.md",
+    "Blocks/Блок 1.4. Продвинутая стилизация.md",
+    "props/gradient.md",
+    "assets/Pasted image 20230917010925.png",
+    "props/transition.md",
+    "assets/Pasted image 20230917011911.png",
+    "Pasted image 20230917010955.png",
+    "Pasted image 20230917010946.png",
+    "Pasted image 20230917011000.png",
+    "props/reset css.md",
+    "props/Без названия.md",
+    "props/text- & font-properties.md",
+    "props/flex.md",
+    "props/bem.md",
+    "assets/Pasted image 20230916133311.png",
+    "assets/Pasted image 20230916151924.png",
+    "Pasted image 20230916151859.png",
+    "assets/Pasted image 20230916151837.png",
+    "props/visibility.md",
+    "assets/Pasted image 20230916131629.png",
+    "props/css func.md",
+    "props/border-radius.md",
+    "custom/Создание слайдера.md",
+    "custom",
+    "props/clip.md",
     "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "props/flex-basis & shrink & grow.md",
+    "props/inline-block.md",
+    "props/float.md",
+    "props/vendor prefixes.md",
+    "props/псевдо/꞉꞉элемент/псевдоэлементы.md",
+    "props/@font-face.md",
     "props/grid-auto-flow.md",
     "props/overflow.md",
-    "props/inline-block.md",
-    "Blocks/Блок 1.4. Продвинутая стилизация.md",
     "props/position.md",
-    "props/stacking context.md",
-    "assets/Pasted image 20230915002354.png",
-    "props/transform.md",
-    "props/transform꞉ translate().md",
-    "props/background.md",
-    "props/word-wrap.md",
-    "props/text- & font- properties.md",
-    "props/column-count.md",
-    "props/text-overflow.md",
-    "props/111.md",
-    "props/text-shadow.md",
-    "props/псевдо/꞉꞉элемент/псевдоэлементы.md",
-    "props/text-indent.md",
-    "props/unicode.md",
-    "props/псевдо/꞉класс/꞉nth-child().md",
-    "props/gradient.md",
-    "props/box-shadow.md",
-    "assets/Pasted image 20230914132357.png",
-    "assets/Pasted image 20230914131911.png",
-    "assets/Pasted image 20230914124344.png",
-    "assets/Pasted image 20230913234326.png",
-    "assets/Pasted image 20230913233831.png",
-    "assets/Pasted image 20230913232116.png",
-    "assets/Pasted image 20230913215246.png",
-    "assets/Pasted image 20230913214443.png",
-    "assets/Снимок экрана_2023-09-13_21-42-49.png",
-    "props/selector_specificity.md",
-    "props/inherit.md",
-    "props/width.md",
     "props/псевдо",
     "props/псевдо/꞉꞉элемент",
     "props/псевдо/꞉класс",
@@ -234,7 +234,6 @@
     "props",
     "Без названия 1",
     "assets",
-    "assets",
-    "archive"
+    "assets"
   ]
 }
