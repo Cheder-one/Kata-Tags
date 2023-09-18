@@ -47,3 +47,12 @@ width: 550px;
 
 ![[Pasted image 20230907232654.png]]
 
+### *Выравнивание Flex*
+
+![[justify-content]]
+
+![[align-items]]
+
+![[margin꞉ auto]]
+
+![[align-self]]
