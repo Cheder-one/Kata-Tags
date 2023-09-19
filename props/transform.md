@@ -72,7 +72,23 @@ transform-origin: top left;
 По умолчанию, значение `transform-origin` равно `50% 50%`, то есть начало системы координат находится в центре объекта. 
 Если не указывать значение `точка-отсчёта-по-Y`, то оно считается равным `50%`.
 
-### *transition*
+----
+-> Элемент будет вращаться вокруг своего верхнего левого угла.
+```
+.element {
+  transform-origin: top left;
+  transform: rotate(45deg);
+}
+```
+
+->  При установке в `px` отсчет идет относительно верхнего левого угла элемента.
+```
+.element {
+  transform-origin: 50px 50px; 
+  transform: rotate(45deg);
+}
+```
+### *transition (переход)*
 
 `transition` - позволяет изменить значение какого-либо свойства плавно
 
@@ -86,9 +102,8 @@ transition: [property] [duration] [timing-function] [delay];
 - `delay` (необязательно): Задает задержку перед началом анимации перехода. Это значение также может быть задано в секундах (суффикс "s") или миллисекундах (суффикс "ms").
 
 ```
-transition: transform 0.5s ease;
- 
 transition: all 0.2s ease-in-out;
+transition: transform 0.5s ease;
 
 .btn-yellow:hover .hidden {
   left: 20px;

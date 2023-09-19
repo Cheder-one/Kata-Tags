@@ -4,18 +4,6 @@
 - параметры самой анимации.
 
 ---
-
-Свойство `animation` состоит из:
-
-1. animation-name
-2. animation-duration
-3. animation-timing-function (`ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`, `...bezier`)
-4. animation-delay
-5. animation-iteration-count (`1`, `2.5`, `infinite`)
-6. animation-direction (`normal`, `reverse`, `alternate`, `alternate-reverse`)
-7. animation-fill-mode (`none`,`forwards`,`backwards`,`both`)
-8. animation-play-state (`running`, `paused`)
-
 ```
 .selector {
   animation: [name] [duration] [timing-fn] [delay] [i-count] [direction] ;
@@ -25,12 +13,14 @@
 }
 ```
 
-- `name` - имя анимации, которое вы определили с помощью `@keyframes`.
-- `duration` - продолжительность анимации.
-- `timing-function` - функция времени (например, `linear`).
-- `delay` - задержка перед началом
-- `iteration-count` - количество повторений (`infinite` для бесконечного повторения).
-- `direction` - направление анимации (например, `alternate`).
+- `animation-name`
+- `animation-duration`
+- `animation-timing-function` (`ease`, `linear`, `ease-in`, `ease-out`, `ease-in-out`, `bezier`)
+- `animation-delay`
+- `animation-iteration-count` (`1`, `2.5`, `infinite`)
+- `animation-direction` (`normal`, `reverse`, `alternate`, `alternate-reverse`)
+- [[#_animation-fill-mode_]] (`none`,`forwards`,`backwards`,`both`)
+- `animation-play-state` (`running`, `paused`)
 
 ---
 
@@ -139,8 +129,6 @@
 
 ### _@keyframes: группировка кадров_
 
-Ключевые кадры в `keyframes` можно группировать, для этого нужно перечислить их через запятую.
-
 ```
 @keyframes stretching {
   0%,
@@ -153,7 +141,7 @@
 }
 ```
 
-В этом примере первые два кадра сгруппированы. Анимируемый элемент сначала изменит свою ширину до `100px` и останется в этом состоянии половину времени анимации. А за вторую половину времени он растянется от `100px` до `200px`.
+Анимируемый элемент сначала изменит свою ширину до `100px` и останется в этом состоянии половину времени анимации. А за вторую половину времени он растянется от `100px` до `200px`.
 
 ### _Множественная анимация_
 
@@ -198,7 +186,7 @@
 }
 ```
 
-### _direction_
+### _animation-direction_
 
 Определяет как будет воспроизводиться анимация после завершения каждого цикла.
 
@@ -236,16 +224,17 @@
 }
 ```
 
-### _animation-fill-mode - Состояние до и после анимации_
+### _animation-fill-mode_
 
+Состояние элемента до и после анимации.
 Определяет, какие стили будут применены к элементу до и после выполнения анимации.
 
 - `none`: Без применения к элементу стилей. _(по умолчанию)_
-- `forwards`: Элемент сохранит свое состояние после анимации.
+- `forwards`: Элемент **_сохранит_** свое **_состояние после анимации_**.
 - `backwards`: Элемент отобразит свое состояние до начала анимации.
 - `both`: До начала анимации элементу присваивается состояние первого ключевого кадра, а после завершения — конечное состояние анимации сохраняется.
 
-### _animation-play-state - Остановка и запуск анимации_
+### _animation-play-state_
 
 Дает возможность поставить анимацию «на паузу», а потом возобновить с места остановки.
 
