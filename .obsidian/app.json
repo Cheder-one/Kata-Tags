@@ -1,6 +1,6 @@
 {
   "smartIndentList": true,
-  "promptDelete": false,
+  "promptDelete": true,
   "tabSize": 2,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "/",

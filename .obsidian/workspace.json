@@ -46,18 +46,6 @@
             }
           },
           {
-            "id": "59e8c966fbcb5da2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/scss.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3aa897236ae88d72",
             "type": "leaf",
             "state": {
@@ -104,9 +92,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d054d237937c8d84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/text-indent.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "931c9c96e60fd72f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blocks/Блок 1.5. JavaScript в браузере.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -172,7 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/scss.md",
+                "file": "Blocks/Блок 1.5. JavaScript в браузере.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +201,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/scss.md",
+                "file": "Blocks/Блок 1.5. JavaScript в браузере.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -212,7 +224,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/scss.md"
+                "file": "Blocks/Блок 1.5. JavaScript в браузере.md"
               }
             }
           },
@@ -259,15 +271,23 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "59e8c966fbcb5da2",
+  "active": "931c9c96e60fd72f",
   "lastOpenFiles": [
-    "props/sass.md",
+    "Blocks/Блок 1.4. Продвинутая стилизация.md",
+    "props/text-indent.md",
+    "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "Pasted image 20230919164911.png",
+    "assets/Pasted image 20230919164947.png",
+    "assets/Pasted image 20230919164730.png",
+    "props/text- & font-properties.md",
+    "Blocks/Блок 1.5. JavaScript в браузере.md",
+    "Blocks/1.5. JavaScript в браузере",
     "props/scss.md",
+    "props/sass.md",
     "props/transform.md",
     "props/bem.md",
     "props/position.md",
     "props/stacking context.md",
-    "Blocks/Блок 1.4. Продвинутая стилизация.md",
     "props/animation.md",
     "props/gradient.md",
     "props/background.md",
@@ -279,24 +299,16 @@
     "props/псевдо/꞉класс/꞉hover.md",
     "props/псевдо/꞉класс/꞉not().md",
     "props/псевдо/꞉класс/꞉nth-child().md",
-    "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
     "props/псевдо/꞉класс/꞉link ꞉visited ꞉active.md",
     "props/псевдо/꞉класс/псевдоклассы.md",
     "props/псевдо/꞉꞉элемент/псевдоэлементы.md",
-    "props/flex.md",
-    "props/visibility.md",
     "assets/Pasted image 20230917010925.png",
     "assets/Pasted image 20230917011911.png",
     "Pasted image 20230917010955.png",
     "Pasted image 20230917010946.png",
     "Pasted image 20230917011000.png",
-    "props/reset css.md",
-    "props/text- & font-properties.md",
     "assets/Pasted image 20230916133311.png",
     "assets/Pasted image 20230916151924.png",
-    "Pasted image 20230916151859.png",
-    "assets/Pasted image 20230916151837.png",
-    "assets/Pasted image 20230916131629.png",
     "custom",
     "props/псевдо",
     "props/псевдо/꞉꞉элемент",
@@ -305,7 +317,6 @@
     "Blocks",
     "props",
     "Без названия 1",
-    "assets",
     "assets"
   ]
 }
