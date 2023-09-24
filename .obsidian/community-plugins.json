@@ -1,8 +1,8 @@
 [
   "table-editor-obsidian",
-  "highlightr-plugin",
-  "obsidian-outliner",
   "obsidian-editor-shortcuts",
   "open-vscode",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-outliner",
+  "cm-editor-syntax-highlight-obsidian"
 ]

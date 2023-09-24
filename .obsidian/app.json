@@ -3,8 +3,8 @@
   "promptDelete": true,
   "tabSize": 2,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "/",
+  "attachmentFolderPath": "assets",
   "newFileLocation": "folder",
-  "newFileFolderPath": "props",
+  "newFileFolderPath": "props/JS",
   "trashOption": "local"
 }

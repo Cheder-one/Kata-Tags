@@ -333,7 +333,7 @@ p {
 >
 ```
 
-Кроме `<link>`, их также можно использовать в `@import`:
+- Кроме `<link>`, их также можно использовать в `@import`:
 
 ```
 @import url(mobile.css) screen and (max-width: 991.98px);
