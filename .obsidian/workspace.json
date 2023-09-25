@@ -27,31 +27,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/Style/calc().md",
+                "file": "props/JS/_.createElement().md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "67bed12d41a4ce80",
+            "id": "31ea8fd47b5174b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/_.children.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "432dcc977b784566",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/Style/scss.md",
+                "file": "custom/webpack git-page.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "children",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,8 +92,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -125,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/_.children.md",
+                "file": "custom/webpack git-page.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/_.children.md",
+                "file": "custom/webpack git-page.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/_.children.md"
+                "file": "custom/webpack git-page.md"
               }
             }
           },
@@ -212,36 +199,36 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "67bed12d41a4ce80",
+  "active": "31ea8fd47b5174b0",
   "lastOpenFiles": [
-    "Blocks/Блок 1.5. JavaScript в браузере.md",
+    "custom/создание слайдера.md",
+    "custom/webpack git-page.md",
     "props/JS/_.children.md",
+    "props/JS/_.createElement().md",
+    "props/JS/cloneNode.md",
+    "Blocks/Блок 1.5. JavaScript в браузере.md",
+    "props/Web/template.md",
+    "props/JS/_.querySelector().md",
+    "props/JS/_.addEventListener().md",
+    "props/Web/псевдо/꞉класс/꞉nth-child().md",
+    "props/Style/scss.md",
+    "props/Web/bem.md",
+    "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "props/JS/_.classList._.md",
+    "props/JS/data-атрибут.md",
+    "props/Style/calc().md",
     "props/Web/псевдо/꞉꞉элемент/псевдоэлементы.md",
     "props/Web/@media.md",
-    "props/JS/data-атрибут.md",
     "props/JS/dataset.md",
-    "props/Style/calc().md",
-    "props/Style/scss.md",
     "props/Style",
-    "props/Web/bem.md",
-    "props/JS/_.addEventListener().md",
-    "props/JS/cloneNode.md",
-    "props/JS/_.createElement().md",
     "scripts/file.js.md",
     "props/JS/file.md",
     "scripts",
-    "props/JS/_.querySelector().md",
     "props/JS/node.remove().md",
     "props/JS/closure.md",
     "props/JS/dom.md",
-    "props/JS/_.classList._.md",
     "props/JS/_.preventDefault().md",
     "props/JS/_.classList.add().md",
-    "props/JS/_.appendChild().md",
-    "props/JS/querySelectorAll().md",
-    "Blocks/Блок 1.4. Продвинутая стилизация.md",
-    "props/JS/for.md",
-    "props/JS/equality == & ===.md",
     "assets/Pasted image 20230920174947.png",
     "assets/Pasted image 20230920132718.png",
     "assets/Pasted image 20230920132334.png",

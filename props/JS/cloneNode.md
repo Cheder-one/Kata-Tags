@@ -18,6 +18,13 @@ element.cloneNode(false);
 
 ### _Вставка множества клонированных элементов_
 
+- Клонировать все элементы, находящиеся внутри тега `<template>`, вы можете использовать метод `cloneNode(true)`
+
+```
+const template = document.querySelector('template');
+const clonedElements = template.content.cloneNode(true);
+```
+---
 ```
 /=/ Контейнер для карточек
 var pool = document.querySelector(".pool");

@@ -46,7 +46,6 @@ var elementsWithSwiperClasses =
 ### _Использование в JavaScript_
 
 - Получить data-атрибут элемента
-
 ```
 <div 
 	data-mobile="false" 
@@ -59,8 +58,11 @@ console.log(slider.dataset.mobile); /=/ false
 ```
 
 - Изменение data-атрибутов:
-
 ```
 slider.dataset.mobile = true;
 ```
 
+- Добавить data-атрибут:
+```
+element.dataset.myAttribute = 'значение';
+```
