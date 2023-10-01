@@ -1,5 +1,43 @@
 Псевдокласс `first-child` позволяет выбрать первый дочерний элемент родителя, а `last-child `— последний дочерний элемент. 
 
+```
+.prices-slider__slide-item-container:first-child {
+	background-color: rebeccapurple;
+}
+.prices-slider__slide-item-container:nth-child(1) { /=/ Аналогично
+	background-color: rebeccapurple;
+}
+```
+
+```html
+<li class="prices-slider__slide swiper-slide">
+  <div class="prices-slider__slide-item-container"> <!-- Окрасит этот --->
+    <h3 class="prices-slider__slide-subtitle"
+      >Ремонтные услуги</h3
+    >
+    <span>Тестирование с выдачей технического заключения</span>
+  </div>
+  <div class="prices-slider__slide-item-container-wrapper">
+    <div class="prices-slider__slide-item-container"> <!-- Окрасит этот --->
+      <h3 class="prices-slider__slide-subtitle">Цена</h3>
+      <span>Бесплатно</span>
+      <h3 class="prices-slider__slide-subtitle">Срок</h3>
+      <span>30-120 мин</span>
+    </div>
+    <div class="prices-slider__slide-item-container"> <!-- Не Окрасит --->
+      <a class="prices-slider__slide-order">
+        <span class="prices-slider__order-item">Заказать</span>
+        <img
+          class="prices-slider__order-item"
+          src="./app/assets/img/ic/goside.svg"
+          alt="go side"
+        />
+      </a>
+    </div>
+  </div>
+</li>
+```
+
 ---
 **! Аналогично nth-child(). 
 Обращаться нужно к искомому дочернему элементу, а не к родительскому контейнеру.**

@@ -55,3 +55,45 @@ const newItemTemplate =
   </label>  
 </li>
 ```
+
+---
+
+```
+const slidesData = [
+  {
+    service: "Диагностика",
+    price: "Бесплатно",
+    duration: "30 мин"
+  },
+  {
+    service: "Замена дисплея",
+    price: "1 000 ₽",
+    duration: "30-120 мин"
+  },
+  {
+    service: "Замена полифонического динамика",
+    price: "1 000 ₽",
+    duration: "30-120 мин"
+  }
+];
+
+const clonedSlides = [];
+const template = document.querySelector(".prices-slider__template").content;
+const slidesTemplate = template.querySelector(".prices-slider__slide");
+const slideText = slidesTemplate.querySelectorAll(".prices-slider__slide-item");
+
+slidesData.forEach(({ service, price, duration }) => {
+  slideText[0].textContent = service;
+  slideText[1].textContent = price;
+  slideText[2].textContent = duration;
+
+  const clonedSlide = slidesTemplate.cloneNode(true);
+  clonedSlides.push(clonedSlide);
+});
+
+const pricesSlider = document.querySelector(".prices-slider__wrapper");
+
+clonedSlides.forEach((slide) => {
+  pricesSlider.append(slide);
+});
+```
