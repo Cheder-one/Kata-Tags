@@ -8,91 +8,61 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cfbbeabb73a60b6d",
+            "id": "f47b8a8e2d57a1e6",
             "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blocks/Блок 1.6. WebCore_Final.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef43d0617fb8a87c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/webpack.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3f2465cebf26f8cc",
-            "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "custom/tags.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "8fd3bf8f21535d96",
+            "id": "e5dcf102a1322eb1",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/_.createElement().md",
+                "file": "Blocks/JS Core/Блок 1. Основные концепции.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "5475aac5c994d4aa",
+            "id": "6b70299646d6ea3b",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/Web/template.md",
+                "file": "Blocks/JS Core/Блок 2. Прототипы и классы.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "985f600f9c0e2fee",
+            "id": "c1323202a33508f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/flex꞉ 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9ba0cd7fef6f87d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/_.querySelector().md",
+                "file": "props/JS/Map() Set().md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,10 +91,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "temp",
+                "query": "Map",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -159,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/Web/template.md",
+                "file": "props/JS/Map() Set().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/Web/template.md",
+                "file": "props/JS/Map() Set().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/Web/template.md"
+                "file": "props/JS/Map() Set().md"
               }
             }
           },
@@ -246,39 +216,41 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "5475aac5c994d4aa",
+  "active": "c1323202a33508f5",
   "lastOpenFiles": [
-    "props/JS/_.createElement().md",
-    "custom/bugs.md",
-    "props/JS/flex꞉ 1.md",
-    "props/Web/псевдо/꞉класс/꞉first-child & ꞉last-child.md",
-    "custom/bugs/Без названия.md",
-    "Blocks/Блок 1.3. Построение сеток + БЭМ именование.md",
-    "custom/bugs",
-    "props/Web/bem.md",
-    "props/Style/saas .scss.md",
+    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+    "Blocks/JS Core/Блок 1. Основные концепции.md",
+    "props/JS/Map() Set().md",
     "custom/tags.md",
-    "props/JS/Image().md",
-    "props/JS/webpack.md",
-    "Blocks/Блок 1.6. WebCore_Final.md",
-    "props/JS/_.querySelector().md",
-    "props/JS/_.classList._.md",
-    "props/JS/_.replaceWith().md",
+    "props/JS/destructuring.md",
+    "props/JS/spread-operator.md",
+    "props/JS/obj_clone.md",
+    "props/JS/recursion.md",
+    "props/JS/window.structuredClone().md",
+    "props/JS/closure callback recursion.md",
+    "props/JS/func arguments.md",
+    "props/JS/callback.md",
+    "props/JS/closure.md",
+    "props/JS/Без названия.md",
+    "props/JS/this.md",
     "props/JS/eslitn & prettier.md",
+    "props/JS/_.bind() _.call() _.apply().md",
+    "props/JS/_.splice().md",
+    "Blocks/Web Core/Блок 1.5. JavaScript в браузере.md",
+    "Blocks/Web Core/Блок 1.6. WebCore_Final.md",
+    "props/JS/pure function.md",
+    "props/JS/mutable & immutable.md",
+    "props/JS/count++ & ++count.md",
+    "props/JS/obj.hasOwnProperty().md",
+    "props/JS/for.md",
+    "props/JS/new Set().md",
+    "Blocks/JS Core",
+    "Blocks/Web Core",
+    "custom/bugs",
     "assets/Pasted image 20230926235118.png",
     "assets/Pasted image 20230926234811.png",
     "assets/Pasted image 20230926233712.png",
-    "props/JS/ESLint.md",
-    "props/JS/npm.md",
-    "Blocks/Блок 1.5. JavaScript в браузере.md",
-    "props/JS/closure.md",
-    "custom/создание слайдера.md",
-    "custom/Tags.md",
-    "custom/webpack git-page.md",
-    "props/JS/_.appendChild().md",
     "custom/Tags.txt",
-    "props/JS/_.addEventListener().md",
-    "props/JS/window.matchMedia.md",
     "props/Style",
     "scripts",
     "assets/Pasted image 20230920174947.png",
@@ -291,8 +263,6 @@
     "props/JS",
     "props/Web",
     "Blocks/1.5. JavaScript в браузере",
-    "custom",
-    "props/Web/псевдо",
-    "props/Web/псевдо/꞉꞉элемент"
+    "custom"
   ]
 }

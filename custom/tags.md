@@ -4027,7 +4027,7 @@ person['first name'].
 Этот способ может быть полезен, если в названии свойства есть символы, которые не могут быть использованы в точечной нотации, но при этом можно использовать точечную нотацию для обращения к более простым свойствам объекта, чтобы код был более читабельным.
 
 -------------------
-/=/=/ bind, call, apply - Методы для привязки к функции какого-то контекста (Применимо только к Функциям.)
+/=/=/ bind, call, apply - Методы для привязки к функции какого-то контекста (Применимо только к Функциям)
 -------------------
     const user2 = {
         name: 'Igor'
@@ -4078,6 +4078,7 @@ func.apply(context, [arg1, arg2, ...])
     const user = {
         name: 'Maxim',
         programmingLang: 'JavaScript',
+        
         getName() {
             return this.name;
         },
@@ -4088,11 +4089,12 @@ func.apply(context, [arg1, arg2, ...])
     console.log('getName:', user.getName()); 
     // getName: Maxim
 -------------------
-/=/=/ Потеря контекста при сохранении объекта.функции в переменную
+/=/=/ Потеря контекста при сохранении референса метода объекта в переменную
 -------------------
     const newGetName = user.getName
     console.log('newGetName:', newGetName()); 
     // newGetName: undefined. 
+    
 Тк мы вызываем функцию newGetName() без контекста(без элемента перед точкой). Поэтому контекст ссылается не на user, а на глобальный объект windows.
 -------
 // Решение ситуации:
@@ -8766,13 +8768,14 @@ ld
         });
     });
 -------------------
-/=/=/ Генерация массива из числа
+/=/=/ Генерация массива из числа. 
 ---------
     const numberOfPages = 4
     console.log([...Array(numberOfPages).keys()]); //  [0, 1, 2, 3]
 
 Данный код создает массив ключей чисел от 0 до (numberOfPages - 1) и выводит его в консоль.
 
+#cоздание массива #заполнение массива
 ---------
 Используя метод Array.from():
 ---------
@@ -10396,9 +10399,8 @@ set, get, has, delete и clear.
 ---------
     const str1 = '5';
 
-    console.log(str1.padStart(2, '0')); // Expected output: "05"
-    console.log(str1.padEnd(2, '0')); // Expected output: "50"
-
+    console.log(str1.padStart(2, '0')); // "05"
+    console.log(str1.padEnd(2, '0')); // "50"
 ---------
     const fullNumber = '2034399002125581';
     const last4Digits = fullNumber.slice(-4);
