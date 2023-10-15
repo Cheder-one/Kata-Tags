@@ -1,16 +1,15 @@
 Функция которая вызывает сама себя с новыми аргументами.
 
 ```
-function factorial(n) {
-    if (n === 0) {
-            return 1; /=/ Базовый случай
-    } else {
-        return n * factorial(n - 1);
-        /=/ Рекурсивный вызов с меньшим аргументом
-    }
+function countdown(i) {
+  console.log(i)
+  if (i <= 1) {  // base case
+    return;  
+  } else {       // recursive case
+    countdown(i - 1)
+  }
 }
-
-console.log(factorial(5)); /=/ 120
+countdown(5);
 ```
 
 ### _Пройти по Объекту в глубь и отсортировать его_
