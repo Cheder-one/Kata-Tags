@@ -36,31 +36,43 @@
             }
           },
           {
-            "id": "2bae08eaea551cab",
+            "id": "39b2ed4a8e1ee5a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/Object.create().md",
+                "file": "props/JS/prototype.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "5d1d0539e9cf09c2",
+            "id": "b28f7d0906ccd763",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/Object.defineProperties().md",
+                "file": "props/JS/event_emitter.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f72111489b838674",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/null-ish_оператор.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -89,7 +101,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#property-descriptors",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -106,8 +118,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -127,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/Object.defineProperties().md",
+                "file": "props/JS/prototype.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/Object.defineProperties().md",
+                "file": "props/JS/prototype.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/Object.defineProperties().md"
+                "file": "props/JS/prototype.md"
               }
             }
           },
@@ -214,36 +225,37 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "5d1d0539e9cf09c2",
+  "active": "39b2ed4a8e1ee5a9",
   "lastOpenFiles": [
-    "props/JS/Object.create().md",
-    "props/JS/Object.defineProperties().md",
     "Blocks/JS Core/Блок 2. Прототипы и классы.md",
     "custom/tags.md",
+    "props/JS/null-ish_оператор.md",
+    "props/JS/event_emitter.md",
+    "props/JS/prototype.md",
+    "props/JS/call_onceFn.md",
+    "props/JS/this.md",
+    "props/JS/isObject_check.md",
+    "props/JS/Object.create().md",
+    "props/JS/class_super().md",
+    "props/JS/class_static.md",
+    "props/JS/obj_getters & setetters.md",
+    "props/JS/obj_clone.md",
+    "getters/setters.md",
+    "getters",
+    "props/JS/Object.defineProperties().md",
     "Blocks/Web Core/Блок 1.5. JavaScript в браузере.md",
     "Blocks/JS Core/Блок 1. Основные концепции.md",
     "props/JS/decorator.md",
     "props/JS/_.bind() _.call() _.apply().md",
-    "props/JS/prototype.md",
     "props/JS/console._().md",
     "assets/Pasted image 20231018015432.png",
     "assets/Pasted image 20231018015406.png",
     "props/JS/Object.getOwnPropertyNames().md",
     "props/JS/obj.hasOwnProperty(key).md",
     "props/JS/arrow_func.md",
-    "props/JS/this.md",
     "props/JS/closure.md",
     "props/Web/flex꞉ 1.md",
     "props/JS/pure_function.md",
-    "props/JS/func_args.md",
-    "props/JS/recursion.md",
-    "props/JS/Errors.md",
-    "Blocks/Web Core/Блок 1.6. WebCore_Final.md",
-    "props/JS/Map() Set().md",
-    "props/JS/new Date().md",
-    "props/JS/Math.trunc().md",
-    "props/JS/destructuring.md",
-    "props/JS/spread-operator.md",
     "Blocks/JS Core",
     "Blocks/Web Core",
     "custom/bugs",
@@ -260,7 +272,6 @@
     "assets/Pasted image 20230920123736.png",
     "props/JS",
     "props/Web",
-    "Blocks/1.5. JavaScript в браузере",
-    "custom"
+    "Blocks/1.5. JavaScript в браузере"
   ]
 }

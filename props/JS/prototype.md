@@ -1,7 +1,10 @@
-- В JS все является объектами (даже `string`)
-- Любой объект имеет `__proto__`
-- Любой объект создается с помощью `Class` или `function` (не `arrow`!)
-  - `Классы` - синт. сахар и на самом деле внутри создаются через `function`
+- Любой объект имеет `__proto__`. Но не имеет `prototype`
+	- `__proto__` дочернего `объекта` `ссылается` на родительский `prototype` и `равен` ему
+
+- Любой `объект` создается с помощью `Class` или `function` (не `arrow`!)
+	- Встроенные и Кастомные `прототипы`(`конструкторы`) имеют `prototype`
+	- `prototype` ни на кого `не ссылаются` и `не равны` `XXX.prototype !== XXX.prototype`
+	- `Class` - синт. сахар и на самом деле являются `function`. Следовательно и создаются внутри `JavaScript` через `function`
 
 ### _Как выглядят прототипы?_
 
@@ -17,15 +20,15 @@ Component.prototype.sayHello = function() {
 };
 
 /=/ Позволяет экземплярам, созданным с помощью `Component()`, наследовать его методы и свойства.
-let component1 = new Component("Компонент 1"); 
+let component1 = new Component("Компонент 1");
 let component2 = new Component("Компонент 2");
 
 /=/ Кастомный прототип
 console.log(Component.prototype);
 ----------------------------------
 
-/=/ Встроенные прототипы  
-console.log(Object.prototype); /=/ Встроенные прототип Объекта	 
+/=/ Встроенные прототипы
+console.log(Object.prototype); /=/ Встроенные прототип Объекта
 console.log(Promise.prototype);
 console.log(Function.prototype);
 console.log(Boolean.prototype);
@@ -33,10 +36,61 @@ console.log(Number.prototype);
 console.log(String.prototype);
 console.log(Array.prototype);
 
-Object.prototype ==идентичны== Object.create(Object.prototype)
+Object.prototype /-идентичны-/ Object.create(Object.prototype)
+```
+
+### _Примеры сравнения `prototype` и `__proto__`_
+
+```
+({}).prototype === {}.__proto__; // false
+// У обычного объекта `{}` нет свойства `prototype`.
+Object.prototype === {}.__proto__; // true
+// Тк `{}` создан от прототипа `Object.prototype`.
+// Следовательно в своем `__proto__` носит ссылку на родительский `prototype`
+
+function ITKamasutra() {}
+ITKamasutra.prototype === ITKamasutra.__proto__; // false
+// `ITKamasutra` создан от `прототипа` Function
+// Следовательно в своем `ITKamasutra.__proto__` будет ссылаться на `Function.prototype`
+// Function.prototype === ITKamasutra.__proto__; // true
+
+function ITIncubator() {}
+function ITKamasutra() {}
+ITIncubator.__proto__ === ITKamasutra.__proto__; // true
+// Их `__proto__` ссылаются на родительский прототип - Function.prototype
+// ITKamasutra.__proto__ === Function.prototype // true
+ITIncubator.prototype === ITKamasutra.prototype; // false
+// ITIncubator и ITKamasutra это два разных класса
+// Следовательно они считаются двумя разными родительскими прототипами
+
+let Component = () => undefined;
+Component.prototype === Object.prototype; // false
+// arrow-function `не может` выступать `конструктором` и создавать `объекты`
+// Следовательно `не имеет` `prototype`. `Component.prototype` // undefined
+let Component2 = function () {};
+Component2.prototype === Object.prototype; // false
+// Но даже так, `Component` был бы `равен только` `Function.prototype`
+
+let age = 18;
+age.prototype === Number.prototype; // false
+// `age` это `не конструктор` и `не имеет` `prototype`
+// age.prototype /=/ undefined
+age.__proto__ === Number.prototype; // true
+// `Число` создается от прототипа `Number`, поэтому переменная с ним === `Number.prototype`
+// Оно не создается через new Number(18). Но когда мы обращаемся к `переменной` как к `объекту` через точку, то `временно` создается `объект` с помощью `new Number()`
+
+class Hacker {}
+Hacker.__proto__ === Function.prototype; // true
+// `Классы` - синт. сахар и внутри являются `функциями`  создаются от `Function.prototype`
+
+function ITIncubator() {}
+ITIncubator.__proto__ === ITIncubator.prototype; // false
+// Тк `ITIncubator.__proto__` создан от прототипа `Function`
+// Следовательно ITIncubator.__proto__ === Function.prototype
 ```
 
 ---
+
 ## _prototype_
 
 - `prototype` - существует только у `function` и `Class`
@@ -56,6 +110,9 @@ function Component() {}      /=/ function - имеет prototype
 const API = function () {};  /=/ function - имеет prototype
 const arrowFn = () => {};    /=/ arrow fn - НЕ имеет prototype
 
+class Hacker {}
+Hacker.__proto__ === Function.prototype; /=/ true
+
 console.log(Samurai.prototype);
 console.log(Component.prototype);
 console.log(API.prototype);
@@ -70,17 +127,20 @@ console.log(String.prototype);
 console.log(Array.prototype);
 ```
 
-Например, `Object.prototype` является `прототипом` для всех `объектов` в `JavaScript`.   
-Каждый `объект` в `JavaScript` наследует `свойства` и `методы` от `Object.prototype`. 
+Например, `Object.prototype` является `прототипом` для всех `объектов` в `JavaScript`.  
+Каждый `объект` в `JavaScript` наследует `свойства` и `методы` от `Object.prototype`.
 Это означает, что вы можете использовать `свойства` и `методы`, определенные в `Object.prototype`, на любом `объекте`.
 
 ---
+
 - Каждый `prototype` - это независимый `Объект`.
   Поэтому:
   - `Number.prototype !== String.prototype`
   - `API.prototype !== Component.prototype`
   - `Samurai.prototype !== Object.prototype`
+
 ---
+
 ### _Как работает поиск вызванных свойств объекта_
 
 - Если `prototype` находит нужное поле к которому мы обращаемся - он его вызывает
@@ -90,6 +150,7 @@ console.log(Array.prototype);
 Данный алгоритм демонстрирует, как `JavaScript` ищет `свойства объекта`, начиная с самого `объекта`, а затем спускаясь по цепочке `прототипов`, пока не найдет нужное `свойство` или не достигнет конца `прототипной цепочки`.
 
 ---
+
 -> Создание поля для глобальной родительской сущности `Object`:
 
 ```
@@ -124,6 +185,7 @@ console.log( rabbit.jumps ); /=/ true
 ```
 
 ---
+
 ## _`__proto__`_
 
 Обратите внимание, что `__proto__` — _не то же самое_, что внутреннее свойство `[[Prototype]]`. Это `геттер/сеттер` для `[[Prototype]]`
@@ -131,7 +193,7 @@ console.log( rabbit.jumps ); /=/ true
 - `__proto__` есть у всех объектов. Является `внутренним(скрытым)` свойством объекта.
 - `__proto__` ссылается на `прототип` своего объекта.
 
-**А если проще**: `__proto__` отражает доступные `методы` и `значения` для "дочернего" `объекта` который был создан от родительского `конструктора`.
+**Если проще**: `__proto__` отражает доступные `методы` и `значения` для "дочернего" `объекта` который был создан от родительского `конструктора`. А точнее ссылается на них.
 
 -> Например:
 
@@ -164,6 +226,7 @@ instance1.b; /=/ 10
 ```
 
 ---
+
 ### _Методы прототипов_
 
 Вместо использования `__proto__`, рекомендуется использовать методы
@@ -171,7 +234,7 @@ instance1.b; /=/ 10
 - `Object.getPrototypeOf(obj)` - метод для получения прототипа объекта.
 - `Object.setPrototypeOf(obj)` - метод для установки/изменения прототипа объекта.
 - `Object.create(obj)`-  создает новый объект с указанным прототипом.
-- `obj.hasOwnProperty(key)` - используется для проверки наличия собственного (`непрототипного`) свойства с заданным именем `key` в объекте `obj`. 
+- `obj.hasOwnProperty(key)` - используется для проверки наличия собственного (`непрототипного`) свойства с заданным именем `key` в объекте `obj`.
 - `Object.getOwnPropertyNames(obj)` - возвращает `массив` со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.
 
 ```
@@ -194,7 +257,7 @@ const parentObj = {
 	},
 };
 const childObj = Object.create(parentObj);
-  
+
 childObj.greet(); /=/ Привет от родительского объекта!
 ```
 
@@ -226,7 +289,7 @@ console.log(student.name); // "Alice"
 
 ---
 
-У одинаковых по типу объектов `__proto__` равны.
+У одинаковых по `типу` объектов, `__proto__` равны.
 
 Тк если `объект` был создан от одного и того же `конструктора`, то `__proto__` будет ссылаться на один и тот же `родительский прототип` от которого был создан.
 
@@ -292,7 +355,7 @@ for(let prop in rabbit) console.log(prop); /=/ jumps, затем eats
 
 Если унаследованные свойства нам не нужны, то мы можем отфильтровать их при помощи встроенного метода `obj.hasOwnProperty(key)`: он возвращает `true`, если у `obj` есть собственное, не унаследованное, свойство с именем `key`.
 
-``` 
+```
 let animal = {
   eats: true
 };
@@ -312,6 +375,7 @@ for(let prop in rabbit) {
   }
 }
 ```
+
 ## _Итерация только по собственным свойствам объекта_
 
 ### _obj.hasOwnProperty(key)_
@@ -337,10 +401,9 @@ let animal = {
 };
 
 /=/ Cоздаем новый объект с добавлением свойств их указанного прототипа
-let rabbit = Object.create(animal); 
+let rabbit = Object.create(animal);
 rabbit.jumps = true;
 
 Object.keys(rabbit); /=/ jumps
 /=/ Возвращает только собственные ключи
 ```
-
