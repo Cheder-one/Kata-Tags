@@ -1,3 +1,5 @@
+`Деструктуризация` - это способ `извлечения` `значений` из `массивов` или объектов и присваивания их `переменным`.
+
 ```
 function calcValues(a, b) {
 	return [a + b, , a * b, a / b];
@@ -8,8 +10,7 @@ const [sum, sub = "Вычитания нет", , ...other] = calcValues(42, 10);
 console.log(sub) /=/ Вычитания нет
 ```
 
--> Example with Obj & Fn
-
+**-> Example with Obj & Fn**
 ```
 const {
   name: firstName = 'Без имени',

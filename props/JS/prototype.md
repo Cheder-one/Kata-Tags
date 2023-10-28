@@ -1,3 +1,5 @@
+`Прототипная модель` в `JavaScript` - это способ создания объектов, основанных на других объектах. 
+
 - Любой объект имеет `__proto__`. Но не имеет `prototype`
 	- `__proto__` дочернего `объекта` `ссылается` на родительский `prototype` и `равен` ему
 
@@ -42,55 +44,54 @@ Object.prototype /-идентичны-/ Object.create(Object.prototype)
 ### _Примеры сравнения `prototype` и `__proto__`_
 
 ```
-({}).prototype === {}.__proto__; // false
-// У обычного объекта `{}` нет свойства `prototype`.
-Object.prototype === {}.__proto__; // true
-// Тк `{}` создан от прототипа `Object.prototype`.
-// Следовательно в своем `__proto__` носит ссылку на родительский `prototype`
+({}).prototype === {}.__proto__; /=/ false
+/=/ У обычного объекта `{}` нет свойства `prototype`.
+Object.prototype === {}.__proto__; /=/ true
+/=/ Тк `{}` создан от прототипа `Object.prototype`.
+/=/ Следовательно в своем `__proto__` носит ссылку на родительский `prototype`
 
 function ITKamasutra() {}
-ITKamasutra.prototype === ITKamasutra.__proto__; // false
-// `ITKamasutra` создан от `прототипа` Function
-// Следовательно в своем `ITKamasutra.__proto__` будет ссылаться на `Function.prototype`
-// Function.prototype === ITKamasutra.__proto__; // true
+ITKamasutra.prototype === ITKamasutra.__proto__; /=/ false
+/=/ `ITKamasutra` создан от `прототипа` Function
+/=/ Следовательно в своем `ITKamasutra.__proto__` будет ссылаться на `Function.prototype`
+/=/ Function.prototype === ITKamasutra.__proto__; /=/ true
 
 function ITIncubator() {}
 function ITKamasutra() {}
-ITIncubator.__proto__ === ITKamasutra.__proto__; // true
-// Их `__proto__` ссылаются на родительский прототип - Function.prototype
-// ITKamasutra.__proto__ === Function.prototype // true
-ITIncubator.prototype === ITKamasutra.prototype; // false
-// ITIncubator и ITKamasutra это два разных класса
-// Следовательно они считаются двумя разными родительскими прототипами
+ITIncubator.__proto__ === ITKamasutra.__proto__; /=/ true
+/=/ Их `__proto__` ссылаются на родительский прототип - Function.prototype
+/=/ ITKamasutra.__proto__ === Function.prototype /=/ true
+ITIncubator.prototype === ITKamasutra.prototype; /=/ false
+/=/ ITIncubator и ITKamasutra это два разных класса
+/=/ Следовательно они считаются двумя разными родительскими прототипами
 
 let Component = () => undefined;
-Component.prototype === Object.prototype; // false
-// arrow-function `не может` выступать `конструктором` и создавать `объекты`
-// Следовательно `не имеет` `prototype`. `Component.prototype` // undefined
+Component.prototype === Object.prototype; /=/ false
+/=/ arrow-function `не может` выступать `конструктором` и создавать `объекты`
+/=/ Следовательно `не имеет` `prototype`. `Component.prototype` /=/ undefined
 let Component2 = function () {};
-Component2.prototype === Object.prototype; // false
-// Но даже так, `Component` был бы `равен только` `Function.prototype`
+Component2.prototype === Object.prototype; /=/ false
+/=/ Но даже так, `Component` был бы `равен только` `Function.prototype`
 
 let age = 18;
-age.prototype === Number.prototype; // false
-// `age` это `не конструктор` и `не имеет` `prototype`
-// age.prototype /=/ undefined
-age.__proto__ === Number.prototype; // true
-// `Число` создается от прототипа `Number`, поэтому переменная с ним === `Number.prototype`
-// Оно не создается через new Number(18). Но когда мы обращаемся к `переменной` как к `объекту` через точку, то `временно` создается `объект` с помощью `new Number()`
+age.prototype === Number.prototype; /=/ false
+/=/ `age` это `не конструктор` и `не имеет` `prototype`
+/=/ age.prototype /=/ undefined
+age.__proto__ === Number.prototype; /=/ true
+/=/ `Число` создается от прототипа `Number`, поэтому переменная с ним === `Number.prototype`
+/=/ Оно не создается через new Number(18). Но когда мы обращаемся к `переменной` как к `объекту` через точку, то `временно` создается `объект` с помощью `new Number()`
 
 class Hacker {}
-Hacker.__proto__ === Function.prototype; // true
-// `Классы` - синт. сахар и внутри являются `функциями`  создаются от `Function.prototype`
+Hacker.__proto__ === Function.prototype; /=/ true
+/=/ `Классы` - синт. сахар и внутри являются `функциями`  создаются от `Function.prototype`
 
 function ITIncubator() {}
-ITIncubator.__proto__ === ITIncubator.prototype; // false
-// Тк `ITIncubator.__proto__` создан от прототипа `Function`
-// Следовательно ITIncubator.__proto__ === Function.prototype
+ITIncubator.__proto__ === ITIncubator.prototype; /=/ false
+/=/ Тк `ITIncubator.__proto__` создан от прототипа `Function`
+/=/ Следовательно ITIncubator.__proto__ === Function.prototype
 ```
 
 ---
-
 ## _prototype_
 
 - `prototype` - существует только у `function` и `Class`

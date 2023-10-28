@@ -30,7 +30,7 @@ console.log(map); /=/ Map { 'Hi' => 'Привет', '42' => '42', 42 => 42 }
 - `map.clear()` – очищает коллекцию от всех элементов.
 - `map.size` – возвращает текущее количество элементов.
 
-### _Map() - итерируемый объект_
+### _Map() итерирование_
 
 - `map.keys()` - возвращает ключи элемента
 - `map.values()` - возвращает значения элемента
@@ -81,15 +81,15 @@ map
 	.set("JS", "JavaScript");
 
 const [[key, value], second, third] = map;
-console.log(key, value); // HTML Hypertext Markup Language
+console.log(key, value); /=/ HTML Hypertext Markup Language
 ```
 
 ## _Set() – коллекция уникальных значений_
 
 ```
-new Set(["HTML", "CSS", "JS"]); // Set { 'HTML', 'CSS', 'JS' }
+new Set(["HTML", "CSS", "JS"]); /=/ Set { 'HTML', 'CSS', 'JS' }
 
-new Set("HTML"); // Set { 'H', 'T', 'M', 'L' }
+new Set("HTML"); /=/ Set { 'H', 'T', 'M', 'L' }
 ```
 
 - `new Set(iterable)` – создаёт `Set` уникальных значений.
@@ -132,7 +132,7 @@ set.forEach((value, valueAgain, set) => {
 });
 ```
 
-### _Особенности и ошибки в Set()_
+## _Особенности и ошибки в Set()_
 
 ### _new Set(num)_
 
@@ -144,7 +144,7 @@ new Set(42); /=/ number 42 is not iterable
 const set = new Set([42]); /=/ Сработает
 ```
 
-### _new Set({}).has({})_
+### _set.has(obj)_
 
 Проверка на наличие выдаст `false`, тк ссылки объектов разные:
 
@@ -152,7 +152,7 @@ const set = new Set([42]); /=/ Сработает
 const set = new Set();
 
 set.add({ className: "button" });
-set.has({ className: "button" }); // false
+set.has({ className: "button" }); /=/ false
 ```
 
 Проверка на наличие будет работать корректно:
@@ -162,5 +162,62 @@ const set = new Set();
 const buttonRef = { className: "button" }
 
 set.add(buttonRef);
-set.has(buttonRef); // true
+set.has(buttonRef); /=/ true
+```
+
+## _MapWeak / SetWeak_
+
+Объекты в `WeakMap` и `WeakSet` могут быть `удалены` `сборщиком мусора`, когда на них больше нет других `ссылок`, кроме ссылок, хранящихся в WeakMap или WeakSet.
+
+### _WeakMap_
+
+- WeakMap - это коллекция, в которой ключами являются объекты, и каждому ключу соответствует определенное значение.
+- Основное отличие от Map заключается в том, что ключи WeakMap должны быть объектами, а не примитивами (как в Map).
+- Когда объект, который служит ключом в WeakMap, становится недоступным из других частей программы, он может быть автоматически удален из WeakMap.
+- Пример использования WeakMap может быть в качестве слабой ссылки для хранения частных данных объекта.
+
+### _WeakSet_
+
+- WeakSet - это коллекция уникальных объектов, где каждый объект может встречаться только один раз.
+- Подобно WeakMap, WeakSet также поддерживает только объекты в качестве элементов.
+- Если объект удаляется из программы и больше не имеет ссылок на себя, он может быть удален из WeakSet сборщиком мусора.
+- WeakSet часто используется для отслеживания уникальных объектов.
+
+### _Очищение неиспользующихся объектов_
+
+```
+const weakMap = new WeakMap();
+
+(function () {
+  const key = {};
+  weakMap.set(key, "value");
+})();
+
+/=/ После завершения этой функции, объект key больше не имеет видимых ссылок на себя и может быть удален сборщиком мусора.
+```
+
+```
+let obj1 = { name: 'John' };
+let obj2 = { name: 'Jane' };
+
+let weakMap = new WeakMap();
+weakMap.set(obj1, 'value 1');
+weakMap.set(obj2, 'value 2');
+
+console.log(weakMap.get(obj1)); /=/ 'value 1'
+console.log(weakMap.get(obj2)); /=/ 'value 2'
+
+obj1 = null; /=/ Объект obj1 больше не имеет ссылок на него
+console.log(weakMap.get(obj1)); /=/ undefined
+console.log(weakMap.get(obj2)); /=/ 'value 2'
+```
+### _Сохранение объектов_
+
+```
+const weakMap = new WeakMap();
+
+const key = {};
+weakMap.set(key, "value");
+
+/=/ Здесь объект key все еще имеет активную ссылку, и он не будет удален.
 ```

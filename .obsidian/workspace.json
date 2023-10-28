@@ -22,13 +22,13 @@
             }
           },
           {
-            "id": "6b70299646d6ea3b",
+            "id": "eec838cb6e644259",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
                 "mode": "source",
                 "source": false
               },
@@ -36,36 +36,12 @@
             }
           },
           {
-            "id": "39b2ed4a8e1ee5a9",
+            "id": "86cc03b3578022fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/prototype.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b28f7d0906ccd763",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/event_emitter.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f72111489b838674",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/null-ish_оператор.md",
+                "file": "props/JS/callback.md",
                 "mode": "source",
                 "source": false
               }
@@ -138,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/prototype.md",
+                "file": "props/JS/callback.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/prototype.md",
+                "file": "props/JS/callback.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/prototype.md"
+                "file": "props/JS/callback.md"
               }
             }
           },
@@ -225,37 +201,42 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "39b2ed4a8e1ee5a9",
+  "active": "86cc03b3578022fb",
   "lastOpenFiles": [
-    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
     "custom/tags.md",
+    "props/JS/callback.md",
+    "props/JS/callbac.md",
+    "props/JS/Без названия.md",
+    "props/JS/this.md",
+    "assets/Pasted image 20231025214119.png",
+    "assets/Pasted image 20231025213518.png",
+    "assets/Pasted image 20231025213508.png",
+    "assets/Pasted image 20231025212425.png",
+    "props/JS/localStorage.md",
+    "Blocks/JS Core/Блок 1. Основные концепции.md",
+    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+    "props/JS/Map() Set().md",
+    "props/JS/prototype.md",
+    "props/JS/obj_getters & setetters.md",
+    "props/JS/recursion.md",
+    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность",
+    "props/JS/_.bind() _.call() _.apply().md",
+    "props/JS/spread-operator.md",
+    "props/JS/destructuring.md",
+    "props/JS/Object.is().md",
+    "props/JS/class_static.md",
     "props/JS/null-ish_оператор.md",
     "props/JS/event_emitter.md",
-    "props/JS/prototype.md",
     "props/JS/call_onceFn.md",
-    "props/JS/this.md",
     "props/JS/isObject_check.md",
     "props/JS/Object.create().md",
     "props/JS/class_super().md",
-    "props/JS/class_static.md",
-    "props/JS/obj_getters & setetters.md",
     "props/JS/obj_clone.md",
     "getters/setters.md",
     "getters",
-    "props/JS/Object.defineProperties().md",
-    "Blocks/Web Core/Блок 1.5. JavaScript в браузере.md",
-    "Blocks/JS Core/Блок 1. Основные концепции.md",
-    "props/JS/decorator.md",
-    "props/JS/_.bind() _.call() _.apply().md",
-    "props/JS/console._().md",
     "assets/Pasted image 20231018015432.png",
     "assets/Pasted image 20231018015406.png",
-    "props/JS/Object.getOwnPropertyNames().md",
-    "props/JS/obj.hasOwnProperty(key).md",
-    "props/JS/arrow_func.md",
-    "props/JS/closure.md",
-    "props/Web/flex꞉ 1.md",
-    "props/JS/pure_function.md",
     "Blocks/JS Core",
     "Blocks/Web Core",
     "custom/bugs",
@@ -266,12 +247,7 @@
     "props/Style",
     "scripts",
     "assets/Pasted image 20230920174947.png",
-    "assets/Pasted image 20230920132718.png",
-    "assets/Pasted image 20230920132334.png",
-    "assets/Pasted image 20230920123809.png",
-    "assets/Pasted image 20230920123736.png",
     "props/JS",
-    "props/Web",
-    "Blocks/1.5. JavaScript в браузере"
+    "props/Web"
   ]
 }

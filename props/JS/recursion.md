@@ -35,8 +35,9 @@ function processObject(obj) {
     const isObject = typeof obj[key] === "object" && obj[key] !== null;
 
     if (isObject) {
-	   obj[key] = processObject(obj[key]) /=/ !Важно не забывать сохранять результат
-																					рекурсии обратно в исходный объект `obj` 
+	   obj[key] = processObject(obj[key]) 
+	   /=/ !Важно сохранять результат рекурсии 
+			   обратно в исходный объект `obj` 
 	  };
   }
 
