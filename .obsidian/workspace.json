@@ -34,33 +34,9 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "c39214a8c6ce5f06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/callback.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c7060cb04b46cea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/promises.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/callback.md",
+                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/callback.md",
+                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/callback.md"
+                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md"
               }
             }
           },
@@ -213,12 +189,12 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "c39214a8c6ce5f06",
+  "active": "eec838cb6e644259",
   "lastOpenFiles": [
+    "custom/tags.md",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
     "props/JS/callback.md",
     "props/JS/promises.md",
-    "custom/tags.md",
     "props/JS/callbac.md",
     "props/JS/this.md",
     "assets/Pasted image 20231025214119.png",
