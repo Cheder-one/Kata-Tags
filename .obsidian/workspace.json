@@ -34,9 +34,45 @@
               },
               "pinned": true
             }
+          },
+          {
+            "id": "6762b613a0647503",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/decorator.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c8d8cba04f62ebd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/this.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a7dc975f4e0e0129",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/trottle & debounce.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -65,7 +101,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "line:(потеря контекста)",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -82,7 +118,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -102,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+                "file": "props/JS/trottle & debounce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+                "file": "props/JS/trottle & debounce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md"
+                "file": "props/JS/trottle & debounce.md"
               }
             }
           },
@@ -189,18 +226,26 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "eec838cb6e644259",
+  "active": "a7dc975f4e0e0129",
   "lastOpenFiles": [
-    "custom/tags.md",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+    "custom/tags.md",
+    "props/JS/trottle & debounce.md",
+    "props/JS/this.md",
+    "props/JS/decorator.md",
+    "assets/Pasted image 20231102105840.png",
+    "assets/Pasted image 20231102105801.png",
+    "assets/Pasted image 20231101210612.png",
+    "assets/Pasted image 20231101210546.png",
+    "assets/Pasted image 20231101210248.png",
+    "assets/Pasted image 20231101210141.png",
+    "assets/Pasted image 20231101203834.png",
     "props/JS/callback.md",
     "props/JS/promises.md",
     "props/JS/callbac.md",
-    "props/JS/this.md",
     "assets/Pasted image 20231025214119.png",
     "assets/Pasted image 20231025213518.png",
     "assets/Pasted image 20231025213508.png",
-    "assets/Pasted image 20231025212425.png",
     "props/JS/localStorage.md",
     "Blocks/JS Core/Блок 1. Основные концепции.md",
     "Blocks/JS Core/Блок 2. Прототипы и классы.md",
@@ -220,21 +265,13 @@
     "props/JS/isObject_check.md",
     "props/JS/Object.create().md",
     "props/JS/class_super().md",
-    "props/JS/obj_clone.md",
-    "getters/setters.md",
     "getters",
-    "assets/Pasted image 20231018015432.png",
-    "assets/Pasted image 20231018015406.png",
     "Blocks/JS Core",
     "Blocks/Web Core",
     "custom/bugs",
-    "assets/Pasted image 20230926235118.png",
-    "assets/Pasted image 20230926234811.png",
-    "assets/Pasted image 20230926233712.png",
     "custom/Tags.txt",
     "props/Style",
     "scripts",
-    "assets/Pasted image 20230920174947.png",
     "props/JS",
     "props/Web"
   ]
