@@ -36,43 +36,33 @@
             }
           },
           {
-            "id": "6762b613a0647503",
+            "id": "6bd99050b7f7236d",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/decorator.md",
+                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "6c8d8cba04f62ebd",
+            "id": "e52724e5784ed08b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/this.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a7dc975f4e0e0129",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/trottle & debounce.md",
+                "file": "props/JS/event & bubbling.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,7 +91,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "line:(потеря контекста)",
+                "query": "\"    targetElement.insertAdjacentHTML(position, text);Вставляет указанный HTML в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с innerHTML.    const textToAdd = event.target.elements.text.value;    const div = document.getElementById(\\\"main\");    div.insertAdjacentHTML(\"beforeend\", `<p>${textToAdd}</p>`);\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -118,8 +108,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -139,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/trottle & debounce.md",
+                "file": "props/JS/event & bubbling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/trottle & debounce.md",
+                "file": "props/JS/event & bubbling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/trottle & debounce.md"
+                "file": "props/JS/event & bubbling.md"
               }
             }
           },
@@ -226,45 +215,45 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "a7dc975f4e0e0129",
+  "active": "e52724e5784ed08b",
   "lastOpenFiles": [
+    "assets/Pasted image 20231103215414.png",
+    "assets/Pasted image 20231103215221.png",
+    "assets/Pasted image 20231103215022.png",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "props/JS/event & bubbling.md",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
     "custom/tags.md",
-    "props/JS/trottle & debounce.md",
-    "props/JS/this.md",
+    "assets/Pasted image 20231103212708.png",
+    "props/JS/_.matches().md",
+    "props/JS/_.addEventListener().md",
+    "props/JS/_.createDocumentFragment().md",
+    "props/JS/_.insertAdjacentElement().md",
+    "props/JS/_.appendChild().md",
+    "props/JS/_.getAttribute().md",
+    "props/JS/data-атрибут.md",
+    "props/JS/data- & dataset.md",
+    "props/JS/console._().md",
+    "props/JS/_.children.md",
+    "assets/Pasted image 20231103152403.png",
+    "assets/Pasted image 20231103152334.png",
+    "assets/Pasted image 20231103151316.png",
+    "assets/Pasted image 20231103151216.png",
+    "assets/Pasted image 20231103145025.png",
+    "assets/Pasted image 20231103144958.png",
+    "props/JS/_.querySelector().md",
     "props/JS/decorator.md",
+    "props/JS/this.md",
+    "props/JS/trottle & debounce.md",
     "assets/Pasted image 20231102105840.png",
-    "assets/Pasted image 20231102105801.png",
-    "assets/Pasted image 20231101210612.png",
-    "assets/Pasted image 20231101210546.png",
-    "assets/Pasted image 20231101210248.png",
-    "assets/Pasted image 20231101210141.png",
-    "assets/Pasted image 20231101203834.png",
     "props/JS/callback.md",
     "props/JS/promises.md",
     "props/JS/callbac.md",
-    "assets/Pasted image 20231025214119.png",
-    "assets/Pasted image 20231025213518.png",
-    "assets/Pasted image 20231025213508.png",
     "props/JS/localStorage.md",
     "Blocks/JS Core/Блок 1. Основные концепции.md",
     "Blocks/JS Core/Блок 2. Прототипы и классы.md",
     "props/JS/Map() Set().md",
-    "props/JS/prototype.md",
-    "props/JS/obj_getters & setetters.md",
-    "props/JS/recursion.md",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность",
-    "props/JS/_.bind() _.call() _.apply().md",
-    "props/JS/spread-operator.md",
-    "props/JS/destructuring.md",
-    "props/JS/Object.is().md",
-    "props/JS/class_static.md",
-    "props/JS/null-ish_оператор.md",
-    "props/JS/event_emitter.md",
-    "props/JS/call_onceFn.md",
-    "props/JS/isObject_check.md",
-    "props/JS/Object.create().md",
-    "props/JS/class_super().md",
     "getters",
     "Blocks/JS Core",
     "Blocks/Web Core",

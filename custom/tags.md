@@ -5054,6 +5054,7 @@ newElem
     <!-- afterend -->
 
     mainNavigation.insertAdjacentElement('afterbegin', newNavButton)
+    
 Примечание: значения beforebegin и afterend работают только если targetElement находится в DOM-дереве и имеет родительский элемент.
 -------------------
 /=/=/ .insertAdjacentHTML() - вставляет указанный HTML, без перезаписи
