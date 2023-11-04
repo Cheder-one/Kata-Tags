@@ -48,21 +48,9 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "e52724e5784ed08b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/event & bubbling.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -128,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/event & bubbling.md",
+                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/event & bubbling.md",
+                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/event & bubbling.md"
+                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md"
               }
             }
           },
@@ -215,15 +203,16 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "e52724e5784ed08b",
+  "active": "6bd99050b7f7236d",
   "lastOpenFiles": [
+    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+    "custom/tags.md",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "props/JS/localStorage.md",
+    "props/JS/event & bubbling.md",
     "assets/Pasted image 20231103215414.png",
     "assets/Pasted image 20231103215221.png",
     "assets/Pasted image 20231103215022.png",
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
-    "props/JS/event & bubbling.md",
-    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
-    "custom/tags.md",
     "assets/Pasted image 20231103212708.png",
     "props/JS/_.matches().md",
     "props/JS/_.addEventListener().md",
@@ -245,11 +234,9 @@
     "props/JS/decorator.md",
     "props/JS/this.md",
     "props/JS/trottle & debounce.md",
-    "assets/Pasted image 20231102105840.png",
     "props/JS/callback.md",
     "props/JS/promises.md",
     "props/JS/callbac.md",
-    "props/JS/localStorage.md",
     "Blocks/JS Core/Блок 1. Основные концепции.md",
     "Blocks/JS Core/Блок 2. Прототипы и классы.md",
     "props/JS/Map() Set().md",
