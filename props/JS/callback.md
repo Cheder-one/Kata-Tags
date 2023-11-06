@@ -95,7 +95,74 @@ fn(callbackMeX);
 
 ### _Более сложный и реальный пример_
 
-**-> Сработает**
+```
+let fileSizes = {
+  testFile1: 65,
+  testFile2: 48
+};
+
+function getFileSize(filename, getSize) {
+  setTimeout(() => getSize(fileSizes[filename]), Math.random() * 500);
+}
+
+function sumFileSizes(filename1, filename2, getFilesSum) {
+/=/ Variant 1 (more detaliled)
+//  getFileSize(filename1, callWhenFirstGet);
+//
+//  function callWhenFirstGet(file1Size) {
+//    getFileSize(filename2, callWhenSecondGet);
+//
+//    function callWhenSecondGet(file2Size) {
+//      getFilesSum(file1Size + file2Size);
+//    }
+//  }
+
+/=/ Variant 2 (ordinary callback-hell)
+  getFileSize(filename1, (file1Size) => {
+    getFileSize(filename2, (file2Size) => {
+      getFilesSum(file1Size + file2Size);
+    });
+  });
+}
+
+sumFileSizes("testFile1", "testFile2", (sum) => {
+  return sum; // 113
+});
+```
+
+-> Реализация кода выше через `Promise`
+```
+let fileSizes = {
+  testFile1: 65,
+  testFile2: 48
+};
+
+function getFileSize(filename, cb) {
+  setTimeout(() => cb(fileSizes[filename]), Math.random() * 500);
+}
+
+async function sumFileSizes(filename1, filename2, cb) {
+  try {
+    const size1 = await new Promise((resolve) => {
+      getFileSize(filename1, resolve);
+    });
+    const size2 = await new Promise((resolve) => {
+      getFileSize(filename2, resolve);
+    });
+
+    return cb(size1 + size2);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+sumFileSizes("testFile1", "testFile2", (sum) => {
+  return sum; /=/ 113
+});
+```
+
+### _Promise.all `polyfil`_
+ 
 ```
 const users = [
   { id: 1, name: "John", age: 25 },

@@ -36,17 +36,27 @@
             }
           },
           {
-            "id": "6bd99050b7f7236d",
+            "id": "45345fa247d7feff",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "props/JS/event_loop.md",
                 "mode": "source",
                 "source": false
-              },
-              "pinned": true
+              }
+            }
+          },
+          {
+            "id": "3a53deaba72cfca7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/promises.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -79,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"    targetElement.insertAdjacentHTML(position, text);Вставляет указанный HTML в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с innerHTML.    const textToAdd = event.target.elements.text.value;    const div = document.getElementById(\\\"main\");    div.insertAdjacentHTML(\"beforeend\", `<p>${textToAdd}</p>`);\"",
+                "query": "\"Очистка: finally\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -116,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "props/JS/event_loop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "props/JS/event_loop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md"
+                "file": "props/JS/event_loop.md"
               }
             }
           },
@@ -200,20 +210,37 @@
       "canvas:Создать новый холст": false,
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
-      "open-vscode:VSCode": false
+      "open-vscode:VSCode": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6bd99050b7f7236d",
+  "active": "45345fa247d7feff",
   "lastOpenFiles": [
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+    "props/JS/event_loop.md",
+    "props/JS/promises.md",
+    "assets/Pasted image 20231106155846.png",
+    "assets/Pasted image 20231106155811.png",
+    "assets/1699274459.0066094.mp4",
+    "assets/1699274459.0066094.gif",
+    "assets/Pasted image 20231106152230.png",
+    "assets/Pasted image 20231106135719.png",
+    "assets/Pasted image 20231106135632.png",
+    "assets/Pasted image 20231106135450.png",
+    "assets/Pasted image 20231106133433.png",
+    "assets/Pasted image 20231106133222.png",
+    "Excalidraw/Drawing 2023-11-06 13.23.21.excalidraw.md",
+    "Excalidraw/Drawing 2023-11-06 13.27.11.excalidraw.md",
+    "Excalidraw/Drawing 2023-11-06 13.23.54.excalidraw.md",
+    "Excalidraw",
+    "assets/Pasted image 20231106132201.png",
     "custom/tags.md",
+    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+    "props/JS/callback.md",
+    "props/JS/class_static.md",
     "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
     "props/JS/localStorage.md",
     "props/JS/event & bubbling.md",
-    "assets/Pasted image 20231103215414.png",
-    "assets/Pasted image 20231103215221.png",
-    "assets/Pasted image 20231103215022.png",
-    "assets/Pasted image 20231103212708.png",
     "props/JS/_.matches().md",
     "props/JS/_.addEventListener().md",
     "props/JS/_.createDocumentFragment().md",
@@ -224,22 +251,9 @@
     "props/JS/data- & dataset.md",
     "props/JS/console._().md",
     "props/JS/_.children.md",
-    "assets/Pasted image 20231103152403.png",
-    "assets/Pasted image 20231103152334.png",
-    "assets/Pasted image 20231103151316.png",
-    "assets/Pasted image 20231103151216.png",
-    "assets/Pasted image 20231103145025.png",
-    "assets/Pasted image 20231103144958.png",
     "props/JS/_.querySelector().md",
     "props/JS/decorator.md",
     "props/JS/this.md",
-    "props/JS/trottle & debounce.md",
-    "props/JS/callback.md",
-    "props/JS/promises.md",
-    "props/JS/callbac.md",
-    "Blocks/JS Core/Блок 1. Основные концепции.md",
-    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
-    "props/JS/Map() Set().md",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность",
     "getters",
     "Blocks/JS Core",
@@ -247,8 +261,6 @@
     "custom/bugs",
     "custom/Tags.txt",
     "props/Style",
-    "scripts",
-    "props/JS",
-    "props/Web"
+    "scripts"
   ]
 }
