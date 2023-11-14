@@ -33,11 +33,11 @@ ___
 
 ![[Pasted image 20231106133433.png]]
 
-## _Очереди Event Loop_
+# _Очереди Event Loop_
 
 Все `очереди задач` _**предоставляет Enent Loop**_
 
-### _Macrotasks_
+## _Macrotasks_
 
 `Макрозадачи` включают в себя операции, которые занимают `больше времени` и требуют `больше вычислений`. Такие как:
 - таймеры (`setTimeout`, `setInterval`)
@@ -68,7 +68,7 @@ ___
 Затем, когда `JavaScript-движок` имеет возможность (когда `стек вызовов` пустой), 
 он берет первую `макрозадачу` из `Callback Queue` и перемещает ее в `Call Stack` (`стек вызовов`), где `вызывает` наш `callback` и код в нем выполняется.
 
-### _Microtasks_
+## _Microtasks_
 
 `Микрозадачи` включают в себя:
 - `promise`
@@ -88,7 +88,7 @@ ___
 
 `Микрозадачи` столь `приоритетны` в выполнении, потому что они `выполняются` перед:
 - `рендерингом`
--  `анимацией`
+- `анимацией`
 - `другими задачами` браузера
 От них зависит `плавность` обновлений `интерфейса`.
 
@@ -102,11 +102,14 @@ ___
 
 ### _Приоритет выполнения_
 
-1. Сначала происходит выполнение главной `макрозадачи` - выполнение `скрипта`. Движение от первой строчки кода к последней. Это выполняет все `синхронные` задачи.
+1. Сначала происходит выполнение всех `синхронных` задач. 
 2. Если движок достиг последней строчки кода, то переходит к очереди `Microtask`
 	- Если в `Microtask` что-то есть, то добавляет в `Call Stack` и выполняет. 
-3. Если `Microtask` нет, то проверяет `Callback Queue`(`очередь макрозадач`)
-	- Если `Call Stack` пуст и в `Callback Queue` что-то есть, то перемещает в `Стопку Вызовов`, вызывает наш `callback` и `код внутри` него `выполняется`
+3. Если `Microtask` нет, то проверяет `Callback Queue`(`очередь макротасок`)
+     Если `Call Stack` пуст:
+	  - То из `Callback Queue` берется **_ОДНА_** `макротаска`
+	  - Перемещает в `Call Stack`, `вызывается` и код внутри `выполняется`.
+	  - После выполнения одной `макротаски`, выполняются все `Microtask`(если есть)
 
 ```
 /=/ Makro queue  
@@ -127,15 +130,20 @@ setTimeout(() => {
 setTimeout(() => {  
   console.log("async callback 2");  
 }, 0);  
-  
-const promise = new Promise((resolve) => {  
+
+console.log(1);
+
+const promise = new Promise((resolve) => {  /=/ Промисы вызваются сразу...
   /=/ Makro queue  
-  console.log("mAcro-task in promise");  
+  console.log("mAcro-task in promise"); 
+  /=/ ...поэтому log выполнится при первом синхронном прохождении
   
   /=/ Micro queue  
   resolve("mIcro-task promise");  
 });  
-  
+
+console.log(2);
+
 /=/ Micro queue  
 promise.then((result) => {  
   console.log(result);  
@@ -144,11 +152,13 @@ promise.then((result) => {
 /=/ Makro queue  
 console.log("mAcro-task end");  
   
-// mAcro-task start  
-// mAcro-task in promise  
-// mAcro-task end  
-// mIcro-task promise  
-// async callback 1  
-// mIcro-task in setTimeout  
+// mAcro-task start
+// 1
+// mAcro-task in promise
+// 2
+// mAcro-task end
+// mIcro-task promise
+// async callback 1
+// mIcro-task in setTimeout
 // async callback 2
 ```

@@ -12,7 +12,7 @@ let promise = new Promise(function(resolve, reject) {
 
 Итак, `исполнитель` запускается автоматически, он должен `выполнить работу`, а затем вызвать `resolve` или `reject`.
 
-### _Внутренние св-ва `инстанса`  от`new Promise`_
+### _Внутренние св-ва объекта `promise`_
 
 У объекта `promise`, возвращаемого конструктором `new Promise`, есть внутренние `свойства`:
 
@@ -174,3 +174,106 @@ promiseRace([firstPromise, secondPromise, thirdPromise]); /=/ 100
 Для каждого `промиса` из массива, вызывается метод `then`/`catch` для обработки ошибки промиса. Если один из промисов выполняется или отклоняется первым, то вызывается соответствующий обработчик (`resolve` или `reject`).
 
 Так как `resolve`/`reject` для одного `промиса` могут вызываться только `единожды`, а `thirdPromise` выполняется быстрее всех остальных промисов, то он будет первым, кто вызовет метод `resolve` нового промиса. Следовательно и вернется только он.
+
+### _Внутреннее строение Promise_
+
+```
+class MyPromise {  
+  constructor(executor) {  
+    this.state = "pending"; // состояние промиса  
+    this.value = undefined; // значение промиса (результат выполнения или ошибка)  
+    this.callbacks = []; // массив колбэков, ожидающих выполнения промиса  
+  
+    const resolve = (value) => {  
+      if (this.state === "pending") {  
+        this.state = "fulfilled";  
+        this.value = value;  
+        this.callbacks.forEach((callback) => callback.onFulfilled(value));  
+      }  
+    };  
+  
+    const reject = (reason) => {  
+      if (this.state === "pending") {  
+        this.state = "rejected";  
+        this.value = reason;  
+        this.callbacks.forEach((callback) => callback.onRejected(reason));  
+      }  
+    };  
+  
+    try {  
+      executor(resolve, reject);  
+    } catch (error) {  
+      reject(error);  
+    }  
+  }  
+  
+  then(onFulfilled, onRejected) {  
+    return new MyPromise((resolve, reject) => {  
+      const handleCallback = () => {  
+        try {  
+          if (this.state === "fulfilled") {  
+            if (typeof onFulfilled === "function") {  
+              const result = onFulfilled(this.value);  
+              resolve(result);  
+            } else {  
+              resolve(this.value);  
+            }  
+          } else if (this.state === "rejected") {  
+            if (typeof onRejected === "function") {  
+              const result = onRejected(this.value);  
+              resolve(result);  
+            } else {  
+              reject(this.value);  
+            }  
+          }  
+        } catch (error) {  
+          reject(error);  
+        }  
+      };  
+      if (this.state === "pending") {  
+        this.callbacks.push({  
+          onFulfilled: handleCallback,  
+          onRejected: handleCallback  
+        });  
+      } else {  
+        setTimeout(handleCallback, 0);  
+      }  
+    });  
+  }  
+  
+  catch(onRejected) {  
+    return this.then(null, onRejected);  
+  }  
+  
+  static resolve(value) {  
+    return new MyPromise((resolve) => resolve(value));  
+  }  
+  
+  static reject(reason) {  
+    return new MyPromise((resolve, reject) => reject(reason));  
+  }  
+  
+  static all(promises) {  
+    return new MyPromise((resolve, reject) => {  
+      const results = [];  
+      let completedCount = 0;  
+  
+      const checkCompletion = () => {  
+        if (completedCount === promises.length) {  
+          resolve(results);  
+        }  
+      };  
+  
+      promises.forEach((promise, index) => {  
+        promise  
+          .then((result) => {  
+            results[index] = result;  
+            completedCount++;  
+            checkCompletion();  
+          })  
+          .catch(reject);  
+      });  
+    });  
+  }  
+}
+```
