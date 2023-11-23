@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f47b8a8e2d57a1e6",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "custom/tags.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "59400ccdbec06051",
             "type": "leaf",
             "pinned": true,
@@ -33,6 +19,18 @@
                 "source": false
               },
               "pinned": true
+            }
+          },
+          {
+            "id": "4e4b8a53e3d1fdb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/DNS.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -72,6 +70,18 @@
             }
           },
           {
+            "id": "18e0531bc2053120",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/fetch.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "71e06ba1fb185ebf",
             "type": "leaf",
             "state": {
@@ -94,9 +104,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d90d49e743904d14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/bubbling & capturing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -162,7 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/HTTP.md",
+                "file": "props/JS/fetch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +201,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/HTTP.md",
+                "file": "props/JS/fetch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +224,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/HTTP.md"
+                "file": "props/JS/fetch.md"
               }
             }
           },
@@ -249,18 +271,20 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "149674830d0841be",
+  "active": "18e0531bc2053120",
   "lastOpenFiles": [
-    "custom/tags.md",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "props/JS/bubbling & capturing.md",
+    "props/JS/fetch.md",
     "props/JS/cookie.md",
+    "props/React/AJAX.md",
+    "props/JS/DNS.md",
+    "props/JS/HTTP.md",
+    "custom/tags.md",
     "props/JS/URL.md",
     "props/React/idempotency.md",
     "props/JS/REST API.md",
-    "props/JS/HTTP.md",
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
     "Blocks/React Core/Блок 1. Основы React.md",
-    "props/JS/fetch.md",
-    "props/JS/DNS.md",
     "props/React",
     "Blocks/Без названия.md",
     "Blocks/React Core",
@@ -271,7 +295,6 @@
     "Excalidraw/Drawing 2023-11-06 13.27.11.excalidraw.md",
     "Excalidraw/Drawing 2023-11-06 13.23.54.excalidraw.md",
     "Excalidraw/Drawing 2023-11-06 13.23.21.excalidraw.md",
-    "props/JS/event & bubbling.md",
     "custom/bugs.md",
     "assets/Pasted image 20231121173608.png",
     "assets/Pasted image 20231121173607.png",
@@ -288,7 +311,6 @@
     "assets/Pasted image 20231120194151.png",
     "assets/Pasted image 20231120192918.png",
     "props/Web/BEM.md",
-    "props/JS/event_loop.md",
     "assets/Pasted image 20231115231912.png",
     "assets/1699995728.656827.mp4",
     "assets/1699274459.0066094.mp4",
