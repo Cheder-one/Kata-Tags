@@ -3,8 +3,44 @@
 Обращение происходит как к `полю`, а не к как `методу`
 
 - `get()` - должен возвращать какое-то значение.
-- `set(value)`
+- `set(value)` 
 
+``` 
+let obj = {
+  get propName() {
+    /=/ Геттер, срабатывает при чтении obj.propName
+  },
+
+  set propName(value) {
+    /=/ Сеттер, срабатывает при записи obj.propName = value
+  }
+};
+```
+
+### _Умные геттеры/сеттеры_
+
+``` 
+let user = {
+  get name() {
+    return this._name;
+  },
+
+  set name(value) {
+    if (value.length < 4) {
+      console.log("Имя слишком короткое, должно быть более 4 символов");
+      return;
+    }
+    this._name = value;
+  }
+};
+
+user.name = "Pete";
+console.log(user.name); // Pete
+
+user.name = ""; // Имя слишком короткое...
+```
+
+-> Example 2
 ```
 const person = {
   firstName: 'John',

@@ -11,7 +11,7 @@ document.body.appendChild(myImage);
 ```
 ---
 
-Работает в `webpack`:
+Работает в `Webpack`
 ```
 import Icon from './icon.png';
 
@@ -22,7 +22,6 @@ element.appendChild(myIcon);
 ```
 
 Переназначение изображения 
-
 ```
 const parentElements = document.querySelectorAll(".parent-element");
 

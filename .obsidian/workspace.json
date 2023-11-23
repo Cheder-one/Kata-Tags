@@ -36,7 +36,7 @@
             }
           },
           {
-            "id": "ac9f4631535193af",
+            "id": "149674830d0841be",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "b5a53b12371fc373",
+            "id": "452ed87563eb24ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -58,9 +58,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fb97f4587499217a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/React/idempotency.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "71e06ba1fb185ebf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/URL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4d0e868707c889f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "props/JS/cookie.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -89,7 +125,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "image",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -126,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "props/JS/HTTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "props/JS/HTTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md"
+                "file": "props/JS/HTTP.md"
               }
             }
           },
@@ -213,52 +249,53 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "59400ccdbec06051",
+  "active": "149674830d0841be",
   "lastOpenFiles": [
-    "props/JS/HTTP.md",
-    "props/JS/REST API.md",
-    "props/JS/SOAP.md",
-    "assets/Pasted image 20231115231912.png",
-    "assets/Pasted image 20231115231909.png",
-    "assets/Pasted image 20231115231653.png",
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
-    "assets/Pasted image 20231115230639.png",
-    "assets/Pasted image 20231115230240.png",
-    "assets/Pasted image 20231115225910.png",
-    "assets/Pasted image 20231115225341.png",
-    "assets/Pasted image 20231115224830.png",
-    "assets/Pasted image 20231115224612.png",
-    "assets/Pasted image 20231115223859.png",
     "custom/tags.md",
+    "props/JS/cookie.md",
+    "props/JS/URL.md",
+    "props/React/idempotency.md",
+    "props/JS/REST API.md",
+    "props/JS/HTTP.md",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "Blocks/React Core/Блок 1. Основы React.md",
+    "props/JS/fetch.md",
     "props/JS/DNS.md",
-    "props/JS/API.md",
+    "props/React",
+    "Blocks/Без названия.md",
+    "Blocks/React Core",
+    "props/JS/Image().md",
+    "props/JS/Proxy DOM.md",
     "props/JS/OSI.md",
-    "props/JS/Без названия 1.md",
-    "assets/1699995728.656827.mp4",
-    "props/JS/event_loop.md",
-    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
-    "custom/webpack git-page.md",
-    "props/JS/promises.md",
-    "assets/1699274459.0066094.mp4",
-    "Excalidraw/Drawing 2023-11-06 13.23.21.excalidraw.md",
+    "props/JS/localStorage.md",
     "Excalidraw/Drawing 2023-11-06 13.27.11.excalidraw.md",
     "Excalidraw/Drawing 2023-11-06 13.23.54.excalidraw.md",
-    "Excalidraw",
-    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
-    "props/JS/callback.md",
-    "props/JS/class_static.md",
-    "props/JS/localStorage.md",
+    "Excalidraw/Drawing 2023-11-06 13.23.21.excalidraw.md",
     "props/JS/event & bubbling.md",
-    "props/JS/_.matches().md",
+    "custom/bugs.md",
+    "assets/Pasted image 20231121173608.png",
+    "assets/Pasted image 20231121173607.png",
+    "props/JS/XHR.md",
     "props/JS/_.addEventListener().md",
-    "props/JS/_.createDocumentFragment().md",
-    "props/JS/_.insertAdjacentElement().md",
+    "assets/Pasted image 20231120233433.png",
+    "assets/Pasted image 20231120232655.png",
+    "assets/Pasted image 20231120205620.png",
+    "props/JS/obj_getters & setetters.md",
+    "геттер/dsad.md",
+    "геттер",
+    "assets/Pasted image 20231120202749.png",
+    "assets/Pasted image 20231120195937.png",
+    "assets/Pasted image 20231120194151.png",
+    "assets/Pasted image 20231120192918.png",
+    "props/Web/BEM.md",
+    "props/JS/event_loop.md",
+    "assets/Pasted image 20231115231912.png",
+    "assets/1699995728.656827.mp4",
+    "assets/1699274459.0066094.mp4",
+    "Excalidraw",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность",
     "getters",
     "Blocks/JS Core",
-    "Blocks/Web Core",
-    "custom/bugs",
-    "custom/Tags.txt",
-    "props/Style"
+    "Blocks/Web Core"
   ]
 }

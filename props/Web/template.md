@@ -7,6 +7,12 @@
 Поиск `template` так же совершают через `id`
 
 ```
+<template id="">
+  <h1>Hello, world!</h1>
+</template>
+```
+
+```
 const taskTemplate = document.querySelector("#task-template");
 
 /=/ Выдаст: (HTMLTemplateElement)  
@@ -30,8 +36,7 @@ const taskTemplate = document.querySelector("#task-template");
 Элементы лежат в свойстве `content` тега `template`. Это свойство и содержит `document-fragment`, внутри которого уже можно искать привычными методами поиска.
 
 ```
-const taskTemplate = 
-	document.querySelector("#task-template").content;
+const taskTemplate = document.querySelector("#task-template").content;
 
 /=/ Выдаст: (DocumentFragment)  
 #document-fragment 
@@ -43,9 +48,11 @@ const taskTemplate =
   </li>
 ```
 
+-> Конечный вариант
 ```
-const newItemTemplate = 
-	taskTemplate.querySelector(".todo-list-item");
+const taskTemplate = document.querySelector("#task-template").content;
+
+const newItemTemplate = taskTemplate.querySelector(".todo-list-item");
 
 /=/ Выдаст: (HTMLLIElement)  
 <li class="todo-list-item"> 

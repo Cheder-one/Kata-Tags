@@ -7,11 +7,11 @@
 ![[Pasted image 20231102105801.png]]
 
 ```
-const debounce = (fn, debounceTime) => {
+const debounce = (fn, delay) => {
   let timer;
   return function (...args) {
     clearTimeout(timer);
-    timer = setTimeout(() => { fn.apply(this, args) }, debounceTime);
+    timer = setTimeout(() => { fn.apply(this, args) }, delay);
   };
 };
 ```
@@ -22,11 +22,11 @@ const fn = () => {
   counter++;
 };
 
-const debounce = (fn, debounceTime) => {
+const debounce = (fn, delay) => {
   let timer;
   return function (...args) {
     clearTimeout(timer);
-    timer = setTimeout(() => { fn.apply(this, args) }, debounceTime);
+    timer = setTimeout(() => { fn.apply(this, args) }, delay);
   };
 };
 
@@ -59,7 +59,7 @@ const fn = () => {
   counter++;
 };
 
-const throttle = (fn, throttleTime) => {
+const throttle = (fn, delay) => {
   let isReady = true;
 
   return function (...args) {
@@ -71,7 +71,7 @@ const throttle = (fn, throttleTime) => {
     }
     setTimeout(() => {
       isReady = true;
-    }, throttleTime);
+    }, delay);
   };
 };
 
@@ -95,7 +95,7 @@ const fn = () => {
   counter++;
 };
 
-const throttle = (fn, throttleTime) => {
+const throttle = (fn, delay) => {
   let isReady = true;
   let lastArgs = null;
   let lastThis = null;
@@ -118,7 +118,7 @@ const throttle = (fn, throttleTime) => {
         lastArgs = null;
         lastThis = null;
       }
-    }, throttleTime);
+    }, delay);
   };
 };
 
