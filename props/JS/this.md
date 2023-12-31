@@ -65,8 +65,7 @@ globalFunction();
 - Если `this` используется **не в функции**, то оно ссылается на **глобальный объект** (например, `window` в браузере или `global` в Node.js).
 
 ---
-
-### _`this`ссылается на внешний контекст вокруг себя_
+### _`this` ссылается на внешний контекст вокруг себя_
 
 - `this` ссылается на внешний контекст вокруг себя и **работает только внутри метода**
 
@@ -208,6 +207,8 @@ boundFn(); /=/ Hello, undefined
 - `параметры` функции
 - `variable` определенные `внутри` функции
 - `variable` определенные` в области видимости`, в которой функция была вызвана.
+
+<iframe width="700" height="300" src="https://www.youtube.com/embed/Bq_tmt-hRn0?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&start=1018&vq=hd1080&autoplay=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **_-> Решение:_**
 Через `bind` указать `контекст` - `объект` к которому нужно `обращаться`, в частности `user`

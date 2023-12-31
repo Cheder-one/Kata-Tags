@@ -23,10 +23,10 @@ const fn = () => {
 };
 
 const debounce = (fn, delay) => {
-  let timer;
+  let lastTimer;
   return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => { fn.apply(this, args) }, delay);
+    clearTimeout(lastTimer);
+    lastTimer = setTimeout(() => { fn.apply(this, args) }, delay);
   };
 };
 
@@ -43,6 +43,51 @@ setTimeout(function () {
 }, 1000);
 ```
 
+```
+ const useDebounce = (fn, delay) => {
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timerRef.current);
+    };
+  }, []);  /=/ Clear the timer when the component unmounts
+  
+
+  return function debouncedFn(...args) {
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+};
+```
+
+```
+class Debounce {
+  constructor(fn, delay) {
+    this.timerRef = null;
+    this.fn = fn;
+    this.delay = delay;
+  }
+
+  debouncedFn(...args) {
+    clearTimeout(this.timerRef);
+
+    this.timerRef = setTimeout(() => {
+      this.fn.apply(this, args);
+    }, this.delay);
+  }
+
+  clearTimer() {
+    clearTimeout(this.timerRef);
+  }
+
+  componentWillUnmount() {
+    this.clearTimer();
+  }
+}
+```
 ### _Throttling_
 
 **Throttling** — `кд` между вызовами (проредить вызовы)

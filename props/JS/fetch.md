@@ -1,5 +1,5 @@
 Метод `fetch()` позволяет получать данные по сети `асинхронно`.
-Возвращает `Promise`.
+Возвращает `Promise`. Когда он выполнится, получим ответ `response` 
 
 ```
 let promise = fetch(url, [options])
@@ -21,7 +21,7 @@ const getAllTodoes = () => {
 
 Без `options` это простой `GET-запрос`, скачивающий содержимое по адресу `url`.
 
-- У `fetch` имеются встроенные `методы` для `получения` и `конвертации` тела ответа, например `response.json()`. Можем вызвать `единожды`. Тоже возвращает `Promise`.
+- У `fetch`, у его тела ответа, имеются встроенные `методы` для `получения` и `конвертации` тела ответа, например `response.json()`. Можем вызвать `единожды`. Тоже возвращает `Promise`.
 - Так же у `fetch`-ответа имеются св-ва:
 	-  **`status`** – код статуса `HTTP-запроса`, например `200`.
 	- **`ok`** – логическое значение: будет `true`, если код `HTTP-статуса` в диапазоне` 200-299`.
@@ -29,17 +29,18 @@ const getAllTodoes = () => {
 ```
 const requestURL = "https://jsonplaceholder.typicode.com/users";  
   
-function sendRequest(method, url, body = null) {  
-  const headers = {  
-    'Content-Type': 'application/json'  
-  }  
+function sendRequest(url, method, header = null, body = null) {  
+	const options = {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      ...header,
+    },
+    body: bodyData ? JSON.stringify(bodyData) : null 
+    /=/ При `POST` конвертируем объект в JSON (иначе будет [object Object])    
+  };
   
-  return fetch(url, {  
-    method: method,  
-    headers: headers,  
-    body: JSON.stringify(body), /=/ При `POST` конвертируем объект в JSON  
-                                   (иначе будет [object Object])    
-  })  /=/ Возвращает Promise  
+  return fetch(url, options)  /=/ Возвращает Promise  
     .then(response => {  
       if (response.ok) {  
         return response.json() /=/ Встроенный метод конвертации ответа в JSON  
@@ -117,6 +118,43 @@ async function fetchData() {
 }
 
 fetchData()
+```
+
+### _Структура API клиента_
+
+```
+class SwapiService   {
+  #apiBase = 'https://swapi.dev/api/';
+
+  async getResources(url) {
+    const response = await fetch(`${this.#apiBase}${url}`);
+
+    if (!response.ok) {
+      throw new Error(
+        `Could not fetch ${url}, received ${response.status}`
+      );
+    }
+    return await response.json();
+  }
+
+  getAllPeople = async () => {
+    const people = await this.getResources('people/');
+    return people.results;
+  };
+
+  getAllPerson = async (id) => {
+    return this.getResources(`people/${id}`);
+  };
+ 
+}
+
+const swapi = new SwapiService();
+
+swapi.getAllPeople().then((body) => {
+  console.log(body);
+});
+
+export default SwapiService;
 ```
 
 ### _Заголовки ответа_

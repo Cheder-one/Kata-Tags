@@ -21,6 +21,17 @@ myIcon.src = Icon;
 element.appendChild(myIcon);
 ```
 
+Работает в `React`
+```
+import logo from '../../assets/Logo.svg';
+
+function Logo() {
+  return <img src={logo} alt="logo" />;
+}
+
+export default Logo;
+```
+
 Переназначение изображения 
 ```
 const parentElements = document.querySelectorAll(".parent-element");

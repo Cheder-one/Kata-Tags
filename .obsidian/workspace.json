@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "59400ccdbec06051",
+            "id": "88434c7be38f0e13",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+                "file": "custom/tags.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,103 +22,31 @@
             }
           },
           {
-            "id": "4e4b8a53e3d1fdb1",
+            "id": "6922bcbccb8ec56e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/DNS.md",
+                "file": "props/React/Func programming.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "149674830d0841be",
+            "id": "d61db20212b30353",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/JS/HTTP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "452ed87563eb24ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/REST API.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fb97f4587499217a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/React/idempotency.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "18e0531bc2053120",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/fetch.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "71e06ba1fb185ebf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/URL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4d0e868707c889f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/cookie.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d90d49e743904d14",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "props/JS/bubbling & capturing.md",
+                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -147,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "image",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -184,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "props/JS/fetch.md",
+                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "props/JS/fetch.md",
+                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -224,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "props/JS/fetch.md"
+                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md"
               }
             }
           },
@@ -271,53 +199,52 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "18e0531bc2053120",
+  "active": "d61db20212b30353",
   "lastOpenFiles": [
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
-    "props/JS/bubbling & capturing.md",
+    "custom/tags.md",
+    "props/React/Func programming.md",
+    "Blocks/React Core/Блок 3. Hooks + Redux.md",
+    "assets/Pasted image 20240101013322.png",
+    "props/React/Object.freeze().md",
+    "assets/Pasted image 20231231184942.png",
+    "assets/Pasted image 20231231184911.png",
+    "Blocks/React Core/Блок 2. Lifecycle и серверное взаимодействие.md",
+    "Blocks/React Core/Блок 1. Основы React.md",
+    "props/JS/Image().md",
+    "props/Web/reset css.md",
+    "Blocks/JS Core/Блок 2. Прототипы и классы.md",
+    "Blocks/React Core/Без названия",
+    "props/React/context.md",
+    "props/JS/obj_getters & setetters.md",
+    "assets/Pasted image 20231215152116.png",
+    "assets/Pasted image 20231215152034.png",
+    "assets/Pasted image 20231215151943.png",
+    "assets/Pasted image 20231215150019.png",
+    "props/JS/trottle & debounce.md",
+    "props/Web/псевдо/꞉класс/꞉nth-child().md",
     "props/JS/fetch.md",
+    "props/React/lib_Emotion.md",
+    "assets/Pasted image 20231126152601.png",
+    "assets/Pasted image 20231126140258.png",
+    "props/JS/localStorage.md",
+    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+    "assets/Pasted image 20231124210003.png",
+    "props/JS/Proxy DOM.md",
+    "props/JS/bubbling & capturing.md",
     "props/JS/cookie.md",
-    "props/React/AJAX.md",
+    "props/JS/REST API.md",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
     "props/JS/DNS.md",
     "props/JS/HTTP.md",
-    "custom/tags.md",
     "props/JS/URL.md",
-    "props/React/idempotency.md",
-    "props/JS/REST API.md",
-    "Blocks/React Core/Блок 1. Основы React.md",
     "props/React",
-    "Blocks/Без названия.md",
     "Blocks/React Core",
-    "props/JS/Image().md",
-    "props/JS/Proxy DOM.md",
-    "props/JS/OSI.md",
-    "props/JS/localStorage.md",
-    "Excalidraw/Drawing 2023-11-06 13.27.11.excalidraw.md",
-    "Excalidraw/Drawing 2023-11-06 13.23.54.excalidraw.md",
-    "Excalidraw/Drawing 2023-11-06 13.23.21.excalidraw.md",
-    "custom/bugs.md",
-    "assets/Pasted image 20231121173608.png",
-    "assets/Pasted image 20231121173607.png",
-    "props/JS/XHR.md",
-    "props/JS/_.addEventListener().md",
-    "assets/Pasted image 20231120233433.png",
-    "assets/Pasted image 20231120232655.png",
-    "assets/Pasted image 20231120205620.png",
-    "props/JS/obj_getters & setetters.md",
-    "геттер/dsad.md",
     "геттер",
-    "assets/Pasted image 20231120202749.png",
-    "assets/Pasted image 20231120195937.png",
-    "assets/Pasted image 20231120194151.png",
-    "assets/Pasted image 20231120192918.png",
-    "props/Web/BEM.md",
-    "assets/Pasted image 20231115231912.png",
     "assets/1699995728.656827.mp4",
     "assets/1699274459.0066094.mp4",
     "Excalidraw",
     "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность",
     "getters",
-    "Blocks/JS Core",
-    "Blocks/Web Core"
+    "Blocks/JS Core"
   ]
 }
