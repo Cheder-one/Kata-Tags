@@ -83,6 +83,11 @@ const App = () => {
 };
 ```
 
+```
+export const setErrors = (message) => (dispatch) => {
+	dispatch(set(message));
+};
+```
 ## _Чистые функции (`pure functions`)_
 
 1. Принимая одно и тоже значение - возвращает одинаковый результат

@@ -22,31 +22,19 @@
             }
           },
           {
-            "id": "6922bcbccb8ec56e",
+            "id": "3f2d14326403ff1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "props/React/Func programming.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d61db20212b30353",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
+                "file": "props/React/RRD.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "url",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -112,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
+                "file": "props/React/RRD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md",
+                "file": "props/React/RRD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/React Core/Блок 3. Hooks + Redux.md"
+                "file": "props/React/RRD.md"
               }
             }
           },
@@ -199,22 +187,32 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "d61db20212b30353",
+  "active": "3f2d14326403ff1d",
   "lastOpenFiles": [
-    "props/React/Func programming.md",
-    "Blocks/React Core/Блок 3. Hooks + Redux.md",
     "custom/tags.md",
+    "props/React/RRD.md",
+    "props/JS/URL.md",
+    "Blocks/React Core/Блок 3. Hooks + Redux.md",
+    "assets/Pasted image 20240113162840.png",
+    "assets/Pasted image 20240113162816.png",
+    "props/React/Redux.md",
+    "props/React/func programming.md",
+    "Blocks/React Core/Блок 4..md",
+    "props/Web/saas .scss.md",
+    "Blocks/React Core/Блок 2. Lifecycle и серверное взаимодействие.md",
+    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
+    "props/React/context.md",
+    "props/React/idempotency.md",
+    "props/React/lib_Emotion.md",
     "assets/Pasted image 20240101013322.png",
     "props/React/Object.freeze().md",
     "assets/Pasted image 20231231184942.png",
     "assets/Pasted image 20231231184911.png",
-    "Blocks/React Core/Блок 2. Lifecycle и серверное взаимодействие.md",
     "Blocks/React Core/Блок 1. Основы React.md",
     "props/JS/Image().md",
     "props/Web/reset css.md",
     "Blocks/JS Core/Блок 2. Прототипы и классы.md",
     "Blocks/React Core/Без названия",
-    "props/React/context.md",
     "props/JS/obj_getters & setetters.md",
     "assets/Pasted image 20231215152116.png",
     "assets/Pasted image 20231215152034.png",
@@ -223,20 +221,11 @@
     "props/JS/trottle & debounce.md",
     "props/Web/псевдо/꞉класс/꞉nth-child().md",
     "props/JS/fetch.md",
-    "props/React/lib_Emotion.md",
     "assets/Pasted image 20231126152601.png",
-    "assets/Pasted image 20231126140258.png",
     "props/JS/localStorage.md",
-    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность.md",
-    "assets/Pasted image 20231124210003.png",
     "props/JS/Proxy DOM.md",
     "props/JS/bubbling & capturing.md",
     "props/JS/cookie.md",
-    "props/JS/REST API.md",
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
-    "props/JS/DNS.md",
-    "props/JS/HTTP.md",
-    "props/JS/URL.md",
     "props/React",
     "Blocks/React Core",
     "геттер",

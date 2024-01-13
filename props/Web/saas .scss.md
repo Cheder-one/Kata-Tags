@@ -10,6 +10,14 @@
     font-family: $font-family;
     background-color: $primary-color;
   }
+
+.checkbox_wrapper {
+  :global { /=/ Использование global 
+    .ant-checkbox {
+      border-color: #2196f3;
+    }
+	}
+}
   ```
 
 Вынос в переменные:
