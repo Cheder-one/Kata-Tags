@@ -26,7 +26,7 @@ function App() {
       <Navbar />
       /=/ Необходимо передавать ссылку на компонент: Home
 			<Navbar />
-			<Route exact path="/" component={Home} />
+			<Route path="/" exact component={Home} />
 			<Route path="/login" component={Login} />
 			<Route path="/posts" component={Posts} />
 			<Route path="/dashboard" component={Dashboard} />
@@ -46,10 +46,10 @@ function App() {
     <>
       <Navbar />
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/posts" component={Posts} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/" component={Home} />
       </Switch>
     </>
   );
@@ -144,9 +144,9 @@ function Navbar() {
 -> `withRouter()`
 
 ```
-<Route 
-	path="/dashboard" 
-	render={() => <Dashboard isAdmin={true} />} 
+<Route
+	path="/dashboard"
+	render={() => <Dashboard isAdmin={true} />}
 />
 
 	==/OR/==
@@ -190,8 +190,8 @@ function App() {
    Методы для `навигации по истории` браузера: `push()`, `replace()`, `goBack()`.
 2. `location` - информация о том, `где` мы сейчас `находимся` и `что искали`.
    Свойства: `patchname`(`путь`), `search`(`строка запроса`), `hash`.
-3. `match` - информация о том, `как текущий URL соответствует маршруту в компоненте <Route>` и `по каким параметрам`. 
-   Свойства: `isExact` - соответствует ли текущий URL точно маршруту Route.  Объект `params` - содержит `параметры маршрута`.
+3. `match` - информация о том, `как текущий URL соответствует маршруту в компоненте <Route>` и `по каким параметрам`.
+   Свойства: `isExact` - соответствует ли текущий URL точно маршруту Route. Объект `params` - содержит `параметры маршрута`.
 
 ```
 {
@@ -232,42 +232,42 @@ URL:     /users/123
 ```
 
 ```
-		* history используется для управления историей браузера и переходами между страницами.
-      - `push`(path, [state]) - перенаправляет на указанный маршрут, добавляет новую запись в историю браузера. Необязательный параметр `state` - предназначен для сохранения необходимой информации при переходе между страницами.
-      - `replace`(path, [state]) - заменяет текущую запись в истории браузера на новую и перенаправляет на указанный маршрут.
-      - `location` - описывает текущий URL-адрес.
-      - `go`(n) - перемещается в истории браузера на указанное количество записей. Если n равно -1, то перемещается на одну запись назад, если n равно 1, то перемещается на одну запись вперед.
-      - `goBack`() - перемещается на одну запись назад в истории браузера.
-      - `goForward`() - перемещается на одну запись вперед в истории браузера.
-      - `action` - указывает на тип действия, которое привело к текущей записи в истории. 
-      Возможные значения: PUSH (добавление новой записи), POP (перемещение на другую запись в истории), REPLACE (замена текущей записи на другую).
-      - `length` - количество записей в истории браузера.
+  * history используется для управления историей браузера и переходами между страницами.
+  -< `push`(path, [state]) - перенаправляет на указанный маршрут, добавляет новую запись в историю браузера. Необязательный параметр `state` - предназначен для сохранения необходимой информации при переходе между страницами.
+  -< `replace`(path, [state]) - заменяет текущую запись в истории браузера на новую и перенаправляет на указанный маршрут.
+  -< `location` - описывает текущий URL-адрес.
+  -< `go`(n) - перемещается в истории браузера на указанное количество записей. Если n равно -1, то перемещается на одну запись назад, если n равно 1, то перемещается на одну запись вперед.
+  -< `goBack`() - перемещается на одну запись назад в истории браузера.
+  -< `goForward`() - перемещается на одну запись вперед в истории браузера.
+  -< `action` - указывает на тип действия, которое привело к текущей записи в истории.
+  Возможные значения: PUSH (добавление новой записи), POP (перемещение на другую запись в истории), REPLACE (замена текущей записи на другую).
+  -< `length` - количество записей в истории браузера.
 ```
 
 ```
-    * location - Все про URL. Содержит информацию о текущем URL, включая pathname, search, hash и state.
-      - `search` - содержит параметры Запроса. 
-      Параметры Запроса: запрос добавляется к URL-адресу после символа (?) и разделяются знаком (&). 
-      Например, если текущий URL /users/123?name=John, то `search` будет равен '?name=John'.
-      - `pathname` - указывает на текущий маршрут. 
-      Например, если текущий URL /users/123, то `pathname` будет равен /users/123.
-      - `hash` - это часть URL-адреса, которая содержит хэш. Хэш используется для прокрутки к определенному элементу на странице. Хэш добавляется после знака (#). 
-      Например, если текущий URL /users/123#profile, то hash будет равен #profile.
-      - `state` - это объект, который может быть использован для передачи данных между маршрутами. 
-      Например, вы можете установить `state` в объект, содержащий данные о пользователе, при переходе на страницу пользователя.
+	* location - Все про URL. Содержит информацию о текущем URL, включая pathname, search, hash и state.
+  -< `search` - содержит параметры Запроса.
+  Параметры Запроса: запрос добавляется к URL-адресу после символа (?) и разделяются знаком (&).
+  Например, если текущий URL /users/123?name=John, то `search` будет равен '?name=John'.
+  -< `pathname` - указывает на текущий маршрут.
+  Например, если текущий URL /users/123, то `pathname` будет равен /users/123.
+  -< `hash` - это часть URL-адреса, которая содержит хэш. Хэш используется для прокрутки к определенному элементу на странице. Хэш добавляется после знака (#).
+  Например, если текущий URL /users/123#profile, то hash будет равен #profile.
+  -< `state` - это объект, который может быть использован для передачи данных между маршрутами.
+  Например, вы можете установить `state` в объект, содержащий данные о пользователе, при переходе на страницу пользователя.
 ```
 
 ```
-    * match - соответствие текущего URL и маршрута. Он содержит параметры, переданные в URL, данные о самом маршруте и т.д.
-      - `params` - определить параметры переданные в URL. 
-      Например, если маршрут определен как /users/:userId, а 
-      текущий URL /users/123, то params будет содержать { userId: '123' }.
-      - `path` - это строка, которая определяет шаблон маршрута. Шаблон маршрута  сопоставляется с текущим URL-адресом и позволяет определить, какой Компонент должен быть отображен на странице.
-      Например, если маршрут определен как /users/:userId, то
-      `path` будет равен /users/:userId. 
-      - `url` - это строка, которая содержит фактический URL-адрес, соответствующий маршруту. 
-      Например, если маршрут определен как /users/:userId, и текущий URL /users/123, то url будет равен /users/123.
-      - `isExact` - это булевое значение, которое указывает, соответствует ли текущий URL полностью маршруту. Если isExact равен true, то URL точно соответствует маршруту. Если isExact равен false, то URL соответствует маршруту только частично.
+	* match - соответствие текущего URL и маршрута. Он содержит параметры, переданные в URL, данные о самом маршруте и т.д.
+  -< `params` - определить параметры переданные в URL.
+  Например, если маршрут определен как /users/:userId, а
+  текущий URL /users/123, то params будет содержать { userId: '123' }.
+  -< `path` - это строка, которая определяет шаблон маршрута. Шаблон маршрута  сопоставляется с текущим URL-адресом и позволяет определить, какой Компонент должен быть отображен на странице.
+  Например, если маршрут определен как /users/:userId, то
+  `path` будет равен /users/:userId.
+  -< `url` - это строка, которая содержит фактический URL-адрес, соответствующий маршруту.
+  Например, если маршрут определен как /users/:userId, и текущий URL /users/123, то url будет равен /users/123.
+  -< `isExact` - это булевое значение, которое указывает, соответствует ли текущий URL полностью маршруту. Если isExact равен true, то URL точно соответствует маршруту. Если isExact равен false, то URL соответствует маршруту только частично.
 ```
 
 ### _Опциональные параметры_
@@ -281,15 +281,17 @@ URL:     /users/123
 -> С помощью `опционального параметра`, реализуем `HOC`
 
 ```
-function Posts({ match }) { 
-  const posts = [
-    { id: 1, title: 'Post 1' },
-    { id: 2, title: 'Post 2' },
-    { id: 3, title: 'Post 3' },
-  ];
+const posts = [
+  { id: 1, title: 'Post 1' },
+  { id: 2, title: 'Post 2' },
+  { id: 3, title: 'Post 3' },
+];
+
+function Posts({ match }) {
   const { id } = match.params;
-  return id 
-	  ? <Post id={id} posts={posts} /> 
+
+  return id
+	  ? <Post id={id} posts={posts} />
 	  : <PostsList posts={posts} />;
 }
 ```
@@ -311,19 +313,180 @@ function PostsList({ posts }) {
 
 ### _Query-параметры_
 
-`Query-параметры` - `параметры запроса` в `URL`, перечисленные после знака “`?`” 
+`Query-параметры` - `параметры запроса` в `URL`, перечисленные после знака “`?`”
+
+-> `query-string.parse()` - преобразует `строку` запроса `в объект`
 
 ```
-http://localhost:5173/mans?name=John&age=30
+http://localhost:5173/posts/?count=1
 ```
 
--> Используем `query.parse()` - преобразует `строку` запроса  `в объект`
+```
+import qs from "query-string";
+
+function Posts({ match, location }) {
+  const { id } = match.params;
+  const { count } = qs.parse(location.search); /=/ { count: '2' }
+
+  const cropPosts = count ? posts.slice(0, count) : posts;
+
+  return id
+    ? <Post id={id} posts={posts} />
+    : <PostsList posts={cropPosts} />;
+}
+
+export default withRouter(Posts);
+```
+
+## _Redirect_
 
 ```
-import query from "query-string";
-
-const search = query.parse("name=John&age=30") 
-
-console.log(search) /=/ { name: 'John', age: '30' }
+function App() {
+  return (
+	  <>
+      <Switch>
+				<Route path="/" exact component={Home} />
+				<Route path="/signin" component={SignIn} />
+				<Route path="/posts/:postId?" component={Posts} />
+				<Route path="/contacts" component={Contacts} />
+				<Redirect from="/lk" to="/signin" />
+				<Route component={NotFound} />
+      </Switch>
+    </>
+  );
+}
 ```
 
+## _History_
+
+```
+function PostsList({ posts }) {
+  return posts.map(({ id, title }) => (
+    <Link key={id} to={`posts/${id}`}>
+      <h3>{title}</h3>
+    </Link>
+  ));
+}
+```
+
+```
+function Post({ id, posts, history }) {
+  const post = posts.find((item) => {
+    return item.id === Number(id);
+  });
+
+  const handleSave = () => {
+    // history.push('/posts');
+    history.replace('/posts'); /=/ Запрещаем возврат(например в редактирование)
+  };
+
+  return (
+    <>
+      <h3>{post ? JSON.stringify(post) : 'Post not found'}</h3>
+      <button type="button" onClick={handleSave}>
+        Сохранить
+      </button>
+    </>
+  );
+}
+```
+
+## _Hooks RRD_
+
+### _useHistory()_
+
+Позволяет получить `доступ к объекту истории браузера`, который можно использовать `для перехода на другой Route` или для получения `информации о предыдущих` маршрутах.
+
+```
+const history = useHistory();
+
+<button
+   type="submit"
+   onClick={() => history.push(`/users/${userId}`)}
+>
+   Сохранить
+</button>
+```
+
+### _useLocation()_
+
+Позволяет получить доступ к информации о `текущем URL-адресе` и `поисковом параметре запроса`.
+
+```
+const location = useLocation();
+const isEdit = location.pathname.endsWith("/edit");
+```
+
+### _useRouteMatch()_
+
+Позволяет получить `информацию о совпадении маршрута`.
+
+```
+import { useRouteMatch } from 'react-router-dom';
+
+function MyComponent() {
+  const match = useRouteMatch('/users/:id');
+
+  if (match) {
+    /=/ Код, который будет выполнен,
+    /=/ если текущий URL совпадает с маршрутом '/users/:id'
+
+    console.log(match.path); /=/ '/users/:id'
+    console.log(match.url); /=/ Текущий URL
+    console.log(match.params); /=/ Параметры маршрута, например { id: '123' }
+  }
+}
+```
+
+### _useParams()_
+
+Позволяет получить доступ к `параметрам маршрута`, определенным с помощью `Route`.
+Выведет `динамические параметры` указанные `после` "`:`", но `не статические параметры`.
+
+```
+/catalog/category - Фиксированный, статический путь
+/catalog/:category - Динамический, необходимый путь
+/catalog/:category? - Динамический опциональный путь
+
+/=/ URL:__blog/posts/123
+<Route path="/posts/:postId" component={Posts} />
+
+const { postId } = useParams(); /=/ 123
+```
+
+-> Так выдаст `edit` из `useParams()`:
+
+```
+|> App.jsx
+
+<Route path="/users/:userId?/:edit?" component={Users} />
+```
+
+```
+const Users = () => {
+    const params = useParams();
+    const { userId, edit } = params;
+    /=/ { userId: '67rdca3eeb7f6fgeed471817', edit: undefined }
+
+    return <>{userId ? <UserPage {...params} /> : <UsersListPage />}</>;
+};
+```
+
+-> Не выдаст `edit`:
+
+```
+|> App.jsx
+
+/=/ Убрали ':' из `edit`
+<Route path="/users/:userId?/edit?" component={Users} />
+```
+
+```
+const Users = () => {
+    const params = useParams();
+    const { userId, edit } = params;
+    /=/ { userId: '67rdca3eeb7f6fgeed471817', edit: undefined }
+
+    return <>{userId ? <UserPage {...params} /> : <UsersListPage />}</>;
+};
+```
