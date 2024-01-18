@@ -9,7 +9,7 @@
 }
 ```
 
-```html
+```
 <li class="prices-slider__slide swiper-slide">
   <div class="prices-slider__slide-item-container"> <!-- Окрасит этот --->
     <h3 class="prices-slider__slide-subtitle"

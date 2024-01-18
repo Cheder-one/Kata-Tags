@@ -1,8 +1,8 @@
 
 Использование `Redux` должно соответствовать подходу `функционального программирования`
 
-**!Внимание** 
-При `обновлении значения` из Redux хранилища `в родительском компоненте`, приводит к `перезагрузке всех дочерних компонентов`, что сбрасывает их состояние.
+**! Внимание !**
+! При `обновлении значения` из Redux хранилища `в родительском компоненте`, приводит к `перезагрузке всех дочерних компонентов`, что сбрасывает их состояние.
 
 ### _Функциональное программирование_
 
@@ -17,7 +17,7 @@
 - **Определение:** Хранилище - объект, который `содержит состояние` всего приложения.
 - **Функции:**
   - `Хранение` текущего `состояния` приложения.
-  - Позволяет `get`(`получать`) текущее `состояние` с помощью `getState()`.
+  - Позволяет `getState`(`получать`) текущее `состояние`.
   - Позволяет `dispatch`(`отправлять/обновлять`) `состояние` с помощью `dispatch(action)`.
   - Позволяет `subscribe`(`добавлять слушателей`) для `отслеживания изменений` состояния.
 
@@ -74,8 +74,21 @@ store.dispatch(incrementAction);
 store.dispatch(incrementAction);
 ```
 
-Когда метод `dispatch` вызывается, `хранилище`(`store`) передает `действие`(`action`)
+**!** Когда метод `dispatch` вызывается, `хранилище`(`store`) передает `действие`(`action`)
 `обработчику`(`reducer`), который `возвращает новое состояние`. Подписчики хранилища, такие как компоненты React, могут быть уведомлены об изменении состояния, чтобы обновить пользовательский интерфейс.
+
+-> Выполнить действие после обновления `state`
+
+```
+export const paginateActions = {
+  updated: (page, size, callback) => async (dispatch, getState) => {
+    await dispatch(updated({ page, size }));
+    if (typeof callback === 'function') {
+			callback();
+		}
+  },
+};
+```
 
 ### _Reducer (`обработчик`)_
 
@@ -271,6 +284,30 @@ export const taskCompleted = (id) => {
 ### _createReducer()_
 
 ```
+import { createAction, createReducer } from 'redux-actions';
+
+/=/ Создание действия с использованием createAction
+const addTodo = createAction('ADD_TODO');
+
+/=/ Создание начального состояния
+const initialState = {
+  todos: [],
+};
+
+/=/ Создание обработчика с использованием createReducer
+const todoReducer = createReducer(initialState, {
+  [addTodo]: (state, action) => ({
+    ...state,
+    todos: [...state.todos, { text: action.payload, completed: false }],
+  }),
+});
+
+const todoAdded = () => (dispatch) => {
+	dispatch(addTodo('Speak in English'));
+}
+```
+
+```
 const initialState = [
   { id: 1, title: "Task 1", completed: false },
   { id: 2, title: "Task 2", completed: false },
@@ -315,26 +352,38 @@ const taskReducer = createReducer(initState, (builder) => {
 Внутри он использует `createAction` и `createReducer`.
 
 ```
-const initialState = { entities: [] };
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  entities: {},
+};
 
 const errorsSlice = createSlice({
-  name: "errors", /=/ Имя перед действием 'entity/action_name'
+  name: 'errors',
   initialState,
   reducers: {
     set(state, action) {
-      state.entities = action.payload;
+      const { key, value } = action.payload;
+      state.entities[key] = value;
+    },
+    clear(state) {
+      state.articles = [];
     },
   },
 });
 
-const { set } = errorsSlice.actions;
+const { set, clear } = errorsSlice.actions;
 
-export const setErrors = (message) => (dispatch) => {
-  dispatch(set(message));
-}
+export const setError = (key, value) => (dispatch) => {
+  dispatch(set({ key, value }));
+};
+export const clearErrors = () => (dispatch) => {
+  dispatch(clear());
+};
 
-const { reducer: errorsReducer } = errorsSlice;
-export default errorsReducer;
+export const getErrors = () => (state) => state.errors.entities;
+
+export default errorsSlice.reducer;
 ```
 
 Желательно не экспортировать сами `actions` за пределы `файла-reducer`.
@@ -361,6 +410,7 @@ const taskSlice = createSlice({
     },
     add(state, action) {
       state.entities.push(action.payload);
+      state.isLoading = false;
     },
     update(state, action) {
       const newArr = state.entities.map((task) => {
@@ -386,38 +436,55 @@ const taskSlice = createSlice({
   },
 });
 
+/=/ Actions - нейминг в прошедшем времени PastSimple
 const { received, add, update, remove, taskRequested, taskRequestFailed } =
   taskSlice.actions;
+ 
+export const ticketActions = {
+	/=/ Обычные функции, обертки actions - обычный нейминг 
+  setTasks: () => async (dispatch) => {
+    dispatch(taskRequested());
+    try {
+      const data = await todosService.fetch();
+      dispatch(received(data));
+    } catch (error) {
+      dispatch(taskRequestFailed());
+      dispatch(setErrors(error.message));
+    }
+  },
 
-export const loadTasks = () => async (dispatch) => {
-  dispatch(taskRequested());
-  try {
-    const data = await todosService.fetch();
-    dispatch(received(data));
-  } catch (error) {
-    dispatch(taskRequestFailed());
-    dispatch(setErrors(error.message));
-  }
+  createTask: (title) => async (dispatch) => {
+    dispatch(taskRequested());
+    try {
+      const data = await todosService.create(title);
+      dispatch(add(data));
+    } catch (error) {
+      dispatch(taskRequestFailed());
+      dispatch(setErrors(error.message));
+    }
+  },
 };
 
-export const taskCompleted = (id) => {
-  return update({ id: id, completed: true });
-};
-
-export const titleChanged = (id) => {
-  return update({ id: id, title: `New Title ${id}` });
-};
-
-export const taskAdded = () => {
-  return add({ id: Date.now(), title: "New Task", completed: false });
-};
-
-export const taskDeleted = (id) => {
-  return remove({ id: id });
-};
+export const = getTasks = () => (state) => state.tasks.entities,
+export const = getTasksLoadingStatus = () => (state) => state.tasks.isLoading,
 
 const { reducer: taskReducer } = taskSlice;
 export default taskReducer;
+```
+
+### _configureStore()_
+
+```
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './rootReducer';
+
+const createStore = () => {
+  return configureStore({
+    reducer: rootReducer,
+  });
+};
+
+export default createStore;
 ```
 
 ### _combineReducers()_
@@ -447,6 +514,23 @@ const createStore = () => {
 };
 ```
 
+#### _rootReducer_
+
+```
+import { combineReducers } from 'redux';
+
+const rootReducer = combineReducers({
+  tickets: ticketsReducer,
+  filters: combineReducers({
+    transfers: transfersReducer,
+    type: typeReducer,
+  }),
+  errors: errorReducer,
+});
+
+export default rootReducer;
+```
+
 ### _useSelector()_
 
 **useSelector()** используется `для выбора определенных частей состояния из хранилища` Redux и предоставления их компоненту. Он принимает функцию селектора, которая принимает весь стейт и `возвращает только нужные данные`. 
@@ -460,7 +544,7 @@ const dispatch = useDispatch();
 
 Когда `состояние, выбранное` с помощью селектора, `изменяется`, компонент автоматически `перерисовывается`. Это позволяет компонентам подписываться на определенные части состояния и получать только необходимые данные.
 
-### _Значения в useSelector()_
+#### _Передача значений_
 
 Чтобы не искать измененное значение по всему проекту, а изменить лишь в одном месте
 
@@ -592,7 +676,18 @@ function App() {
 ```
 ### _Middleware_
 
-**Middleware** - логгер/перехватчик
+**Middleware** - логгер/перехватчик.
+
+**Middleware** - `ряд функций` каррирования, которые `обрабатывают действия`(`actions`) `перед тем, как они достигнут reducer-а`.
+
+```
+const loggerMiddleware = store => next => action => {
+  console.log('Dispatching:', action);
+  const result = next(action);
+  console.log('Next state:', store.getState());
+  return result;
+};
+```
 
 ```
 |> logger.js
@@ -611,19 +706,15 @@ const logger = (store) => {
           },
         });
         console.log("Added a new task");
-
         return; 
         /=/ Останавливаем локальное распространение ранее назначенного actions
       }
-      
       return next(action); 
       /=/ Позволяет распространятся следующим actions
       /=/ Если не возвращать, то actions не работают
     };
   };
 };
-
-export default logger;
 ```
 
 ```
@@ -649,7 +740,7 @@ export default initStore;
 **Thunk** это такой же `middleware` перехватчик, который можно создать самостоятельно. 
 При использовании `configureStore` из `@reduxjs/toolkit`, **Thunk** вшит туда по-умолчанию.
 
-**Redux Thunk** позволяет `использовать функции-создатели действий`, которые `возвращают функции вместо обычных объектов действий`.
+**Redux Thunk** позволяет `dispatch-ить функции-создатели действий`, которые `возвращают функции вместо обычных объектов действий`.
 
 ```
 dispatch(setErrors(error.message)); 

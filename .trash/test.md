@@ -25,11 +25,11 @@ function App() {
     <>
       <Navbar />
       /=/ Необходимо передавать ссылку на компонент: Home
-			<Navbar />
-			<Route path="/" exact component={Home} />
-			<Route path="/login" component={Login} />
-			<Route path="/posts" component={Posts} />
-			<Route path="/dashboard" component={Dashboard} />
+      <Navbar />
+   <Route path="/" exact component={Home} />
+   <Route path="/login" component={Login} />
+   <Route path="/posts" component={Posts} />
+   <Route path="/dashboard" component={Dashboard} />
     </>
   );
 }
@@ -134,10 +134,10 @@ function Navbar() {
   render={(routerProps) => <Dashboard isAdmin={true} {...routerProps} />}
 />
 
-	==/OR/==
+ ==/OR/==
 
 <Route path="/dashboard">
-	{(routerProps) => <Dashboard {...routerProps} isAdmin />}
+ {(routerProps) => <Dashboard {...routerProps} isAdmin />}
 </Route>;
 ```
 
@@ -145,14 +145,14 @@ function Navbar() {
 
 ```
 <Route
-	path="/dashboard"
-	render={() => <Dashboard isAdmin={true} />}
+ path="/dashboard"
+ render={() => <Dashboard isAdmin={true} />}
 />
 
-	==/OR/==
+ ==/OR/==
 
 <Route path="/dashboard">
-	<Dashboard isAdmin={false} />
+ <Dashboard isAdmin={false} />
 </Route>
 ```
 
@@ -231,6 +231,17 @@ URL:     /users/123
 -< location.patchname - текущий URL
 ```
 
+- history используется для управления историей браузера и переходами между страницами.
+  - `push`(path, [state]) - перенаправляет на указанный маршрут, добавляет новую запись в историю браузера. Необязательный параметр `state` - предназначен для сохранения необходимой информации при переходе между страницами.
+  - `replace`(path, [state]) - заменяет текущую запись в истории браузера на новую и перенаправляет на указанный маршрут.
+  - `location` - описывает текущий URL-адрес.
+  - `go`(n) - перемещается в истории браузера на указанное количество записей. Если n равно -1, то перемещается на одну запись назад, если n равно 1, то перемещается на одну запись вперед.
+  - `goBack`() - перемещается на одну запись назад в истории браузера.
+  - `goForward`() - перемещается на одну запись вперед в истории браузера.
+  - `action` - указывает на тип действия, которое привело к текущей записи в истории.
+  Возможные значения: PUSH (добавление новой записи), POP (перемещение на другую запись в истории), REPLACE (замена текущей записи на другую).
+  - `length` - количество записей в истории браузера.
+
 ```
   * history используется для управления историей браузера и переходами между страницами.
   -< `push`(path, [state]) - перенаправляет на указанный маршрут, добавляет новую запись в историю браузера. Необязательный параметр `state` - предназначен для сохранения необходимой информации при переходе между страницами.
@@ -245,7 +256,7 @@ URL:     /users/123
 ```
 
 ```
-	* location - Все про URL. Содержит информацию о текущем URL, включая pathname, search, hash и state.
+ * location - Все про URL. Содержит информацию о текущем URL, включая pathname, search, hash и state.
   -< `search` - содержит параметры Запроса.
   Параметры Запроса: запрос добавляется к URL-адресу после символа (?) и разделяются знаком (&).
   Например, если текущий URL /users/123?name=John, то `search` будет равен '?name=John'.
@@ -258,7 +269,7 @@ URL:     /users/123
 ```
 
 ```
-	* match - соответствие текущего URL и маршрута. Он содержит параметры, переданные в URL, данные о самом маршруте и т.д.
+ * match - соответствие текущего URL и маршрута. Он содержит параметры, переданные в URL, данные о самом маршруте и т.д.
   -< `params` - определить параметры переданные в URL.
   Например, если маршрут определен как /users/:userId, а
   текущий URL /users/123, то params будет содержать { userId: '123' }.
@@ -291,8 +302,8 @@ function Posts({ match }) {
   const { id } = match.params;
 
   return id
-	  ? <Post id={id} posts={posts} />
-	  : <PostsList posts={posts} />;
+    ? <Post id={id} posts={posts} />
+    : <PostsList posts={posts} />;
 }
 ```
 
@@ -308,113 +319,6 @@ function PostsList({ posts }) {
   return posts.map((post) => {
     return <h3 key={post.id}>{post.title}</h3>;
   });
-}
-```
-
-### _/:slug + Redux_
- 
-Рабочая `реализация ветвления компонентов` в зависимости от наличия `params`.
-Реализация с учетом: 
-- `записи в store` => 
-- `ререндером  иерархии компонентов которые получают это значение из store` =>
-- `получением данных из хранилища Redux` =>
-- `отображение компонента с полученными данными` 
-
-```
-function App() {
-  return (
-		<Switch>
-			/=/ Независмо, есть slug или нет, отобразить компонент
-		  <Route path="/articles/:slug?" component={DynamicArticleRender} />
-		  <Route path="/" exact component={ArticlesPage} />
-		  <Route component={NotFound} />
-		</Switch>
-  );
-}
-```
-
-```
-function DynamicArticleRender() {
-  const { slug } = useParams();
-
-  return slug ? <FullArticle slug={slug} /> : <ArticlesPage />;
-}
-```
-
-```
-function ArticlesPage({
-  articlesChunk,
-  pagination,
-  errors,
-  isLoading,
-  setArticlesChunk,
-}) {
-  const { articles, articlesCount } = articlesChunk;
-
-	useEffect(() => {
-    const params = getPaginateParams({ pagination });
-    setArticlesChunk(params);
-  }, [pagination]);
-	/=/ Получение данных => Запись в store => Ререндер
-
-  return !isLoading && !errors.articles ? (
-    <Col>
-      <ArticleList articles={articles} />
-      <Pagination itemsCount={articlesCount} />
-    </Col>
-  ) : (
-    <h1>Loading...</h1>
-  );
-}
-```
-
-```
-function FullArticle({ articleOne, isLoadingOne, setArticleOne }) {
-  const { slug } = useParams();
-
-  useEffect(() => {
-    setArticleOne(slug);
-  }, []);
-	/=/ Получение данных => Запись в store => Ререндер
-
-  return (
-    !isLoadingOne && (
-      <div>
-        <Article key={articleOne.slug} article={articleOne} isFull />
-      </div>
-    )
-  );
-}
-```
-
-```
-function Article({ article, isFull }) {
-  return (
-    <article className={_.article_card}>
-      <Row className={_.header}>
-        <HeaderMeta
-          slug={article.slug}
-          title={article.title}
-          hearts={article.favoritesCount}
-          tagList={article.tagList}
-        />
-        <PostedMeta
-          date={article.createdAt}
-          image={article.author.image}
-          username={article.author.username}
-        />
-      </Row>
-      <Row className={_.description}>
-        <div className={_.text}>{article.description}</div>
-      </Row>
-
-      {isFull && article.body ? (
-        <Markdown className={_.body}>
-          {removeInvisibleChar(article.body).trim()}
-        </Markdown>
-      ) : null}
-    </article>
-  );
 }
 ```
 
@@ -450,14 +354,14 @@ export default withRouter(Posts);
 ```
 function App() {
   return (
-	  <>
+   <>
       <Switch>
-				<Route path="/" exact component={Home} />
-				<Route path="/signin" component={SignIn} />
-				<Route path="/posts/:postId?" component={Posts} />
-				<Route path="/contacts" component={Contacts} />
-				<Redirect from="/lk" to="/signin" />
-				<Route component={NotFound} />
+    <Route path="/" exact component={Home} />
+    <Route path="/signin" component={SignIn} />
+    <Route path="/posts/:postId?" component={Posts} />
+    <Route path="/contacts" component={Contacts} />
+    <Redirect from="/lk" to="/signin" />
+    <Route component={NotFound} />
       </Switch>
     </>
   );
@@ -550,50 +454,6 @@ function MyComponent() {
 Позволяет получить доступ к `параметрам маршрута`, определенным с помощью `Route`.
 Выведет `динамические параметры` указанные `после` "`:`", но `не статические параметры`.
 
-**! Внимание !**
-! Значение `params` удастся получить только если установлен `Rout` и задан `Компонент для отображения`. При `Redirect => NotFound` `params не получить`.
-
-```
-function App() {
-  return (
-    <Switch>
-		  <Route path="/" exact component={ArticlesPage} />
-		  <Route path="/articles" component={ArticlesPage} />
-		  <Route path="/articles/:slug" component={FullArticle} />
-			/=/ Здесь нужно указывать динамический путь ':' в '/articles/:slug'
-
-		  <Route component={NotFound} />
-    </Switch>
-  );
-}
-```
-
--> **! Внимание !**
-
-```
-function Article({ slug, title }) {
-	return (
-		/=/ Пишем /articles, иначе при повторном нажатии будет '/articles/articles/'
-		
-		<Link to={`/articles/${slug}`} className={_.title}>
-			{title}
-		</Link>
-	)
-	/=/ Здесь НЕ нужно указывать ':' в `articles/${slug}`,
-	/=/ Тк это будет частью реального URL
-}
-```
-
-```
-function FullArticle() {
-  const params = useParams();
-  console.log(params); /=/ {slug: 'lorem-ipsum-dolor-ojq1ph'}
-
-  return <h1>FullArticle</h1>;
-}
-```
-
-____
 ```
 /catalog/category - Фиксированный, статический путь
 /catalog/:category - Динамический, необходимый путь
@@ -604,11 +464,12 @@ ____
 
 const { postId } = useParams(); /=/ 123
 ```
-____
 
 -> Так выдаст `edit` из `useParams()`:
 
 ```
+|> App.jsx
+
 <Route path="/users/:userId?/:edit?" component={Users} />
 ```
 
@@ -625,6 +486,8 @@ const Users = () => {
 -> Не выдаст `edit`:
 
 ```
+|> App.jsx
+
 /=/ Убрали ':' из `edit`
 <Route path="/users/:userId?/edit?" component={Users} />
 ```
@@ -646,11 +509,11 @@ const Users = () => {
 ```
 function App() {
   return (
-	  <>
+   <>
       <Switch>
-				<Route path="/contacts/departaments-1" component={...} /> <- Выносим
-				<Route path="/contacts/departaments-2" component={...} /> <- Выносим
-				<Route path="/contacts" component={Contacts} />
+    <Route path="/contacts/departaments-1" component={...} /> <- Выносим
+    <Route path="/contacts/departaments-2" component={...} /> <- Выносим
+    <Route path="/contacts" component={Contacts} />
         /=/ Основной путь к HOC-узлу роутов
         
         <Route component={NotFound} />
@@ -683,38 +546,4 @@ function Contacts() {
     </>
   );
 }
-```
-
-## _Папка Routes_
-
-```
-const Routes = () => {
-  return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About} />
-    </Switch>
-  );
-};
-```
-
-```
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import Routes from './routes';
-import store from './redux/store';  
-
-const App = () => {
-  return (
-    <Provider store={store}>
-      <Router>
-        <div>
-          {/* Ваши другие компоненты и макеты здесь, если необходимо */}
-          <Routes />
-        </div>
-      </Router>
-    </Provider>
-  );
-};
 ```
