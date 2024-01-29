@@ -1,6 +1,13 @@
-## *Сброс перед началом верстки *
+## _Сброс перед началом верстки_
 
-Например чтобы обнулить внешние отступы у `<body>` и `<ul>` и точки
+```
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
 ```
 html, 
 body {
@@ -88,7 +95,6 @@ li {
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
 }
 

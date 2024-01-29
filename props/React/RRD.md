@@ -1,6 +1,10 @@
 Это библиотека, предназначенная для маршрутизации страниц в React (`роутинг`).
 Позволяет перемещаться по приложению без перезагрузки страницы, тем самым мы реализуем функционал `Single-Page App`
 
+**! Внимание !**
+! При выносе роутов, NotFound не сработает в том компоненте где его нет. 
+Нужно указывать `<Redirect to="..." />`
+
 ```
 |> main.jsx
 createRoot(document.getElementById('root')).render(
@@ -455,7 +459,7 @@ function App() {
 				<Route path="/" exact component={Home} />
 				<Route path="/signin" component={SignIn} />
 				<Route path="/posts/:postId?" component={Posts} />
-				<Route path="/contacts" component={Contacts} />
+				
 				<Redirect from="/lk" to="/signin" />
 				<Route component={NotFound} />
       </Switch>
@@ -464,6 +468,26 @@ function App() {
 }
 ```
 
+```
+
+function App() {
+  return (
+    <>
+      <Header />
+      <Flex justify="center">
+        <Switch>
+          <Route path="/articles/:slug?" component={ArticleSwitcher} />
+          <Route path="/:loginType" component={LoginSwitcher} />
+          <Route path="/" exact component={ArticlesPage} />
+
+          <Redirect to="/not-found" />
+          <Route path="/not-found" component={NotFound} />
+        </Switch>
+      </Flex>
+    </>
+  );
+}
+```
 ## _History_
 
 ```
@@ -640,81 +664,148 @@ const Users = () => {
 ```
 
 ## _Вложенные маршруты_
-
-Разгружаем основной узел роутов в `App`
-
 ```
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 function App() {
   return (
-	  <>
-      <Switch>
-				<Route path="/contacts/departaments-1" component={...} /> <- Выносим
-				<Route path="/contacts/departaments-2" component={...} /> <- Выносим
-				<Route path="/contacts" component={Contacts} />
-        /=/ Основной путь к HOC-узлу роутов
-        
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/">Главная</Link>
+        </li>
+        <li>
+          <Link to="/contacts">Контакты</Link>
+        </li>
+      </ul>
+
+      <main>
+        <Switch>
+          <Route path="/contacts" component={Contacts} />
+          <Route path="/" exact component={Home} />
+          <Route patch="/404" component={NotFound} />
+			    <Redirect to="/404" />
+          /=/ NotFound сработает при ошибке в роутах 
+          /=/ Например если написать '/contactsq1'
+          /=/ Но не сработает если написать '/contacts/qwqw'
+        </Switch>
+      </main>
+    </Router>
   );
 }
-```
 
-```
+const Home () => <h2>Главная</h2
+const NotFound () => <h2>NotFound</h2
+
+const ContactDepartments1 () => <h3>Департамент 1</h3
+const ContactDepartments2 () => <h3>Департамент 2</h3
+
 function Contacts() {
   return (
     <>
       <h1>Контакты</h1>
       <ul>
-        <li><Link to="/contacts/departaments-1">Департамент 1</Link></li>
-        <li><Link to="/contacts/departaments-2">Департамент 2</Link></li>
+        <li>
+          <Link to="/contacts/departments-1">Департамент 1</Link>
+        </li>
+        <li>
+          <Link to="/contacts/departments-2">Департамент 2</Link>
+        </li>
       </ul>
-      
+
       <Switch>
-        <Route
-          path="/contacts/departaments-1"
-          component={ContactDepartaments1}
-        />
-        <Route
-          path="/contacts/departaments-2"
-          component={ContactDepartaments2}
-        />
+        <Route path="/contacts/departments-1" component={ContactDepartments1} />
+        <Route path="/contacts/departments-2" component={ContactDepartments2} />
+        /=/ Здесь нет NotFound 
+		    /=/ Поэтому необходимо указать <Redirect to="/404" /> 
+		    /=/ Или <Route patch="*" component={NotFound} /> (если не работает Redirect)
       </Switch>
     </>
   );
 }
+
+export default App;
+
 ```
 
 ## _Папка Routes_
 
 ```
-const Routes = () => {
+function LoginRoutes() {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About} />
+	    /=/ Указываем exact, чтобы не пропускал /login/sign-in/12313
+      <Route path="/login/sign-in" exact component={LoginForm} />
+      <Route path="/login/sign-up" exact component={RegisterForm} />
+      <Redirect to="/404" />;
     </Switch>
   );
-};
+}
 ```
 
 ```
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+function App() {
 
-import Routes from './routes';
-import store from './redux/store';  
-
-const App = () => {
   return (
-    <Provider store={store}>
-      <Router>
-        <div>
-          {/* Ваши другие компоненты и макеты здесь, если необходимо */}
-          <Routes />
-        </div>
-      </Router>
-    </Provider>
+    <Switch>
+      <Route path="/" exact component={ArticlesPage} />
+      <Route path="/login" component={LoginRoutes} />
+      <Route path="/articles/:slug?" component={ArticleSwitcher} />
+      <PrivateRoute path="/profile" component={ProfileEditForm} />
+      <Route path="/404" component={NotFound} />
+      <Redirect to="/404" />;
+    </Switch>
   );
-};
+}
+```
+
+## _PrivateRoute_
+
+```
+function PrivateRoute({ component: Component, ...rest }) {
+  const isAuthenticated = useSelector(authSelectors.isAuthenticated);
+
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? <Component {...props} /> : <Redirect to="/sign-in" />
+      }
+    />
+  );
+}
+
+|> App.jsx
+
+<PrivateRoute path="/profile" component={ProfileEditForm} />
+```
+
+```
+import { useSelector } from 'react-redux';
+import { Children, cloneElement } from 'react';
+import { Route, Redirect } from 'react-router-dom';
+ 
+function PrivateRoute({ children, ...rest }) {
+  const isAuthenticated = useSelector(authSelectors.isAuthenticated);
+
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? (
+          Children.map(children, (child) => cloneElement(child, { ...props }))
+        ) : (
+          <Redirect to="/sign-in" />
+        )
+      }
+    />
+  );
+}
+
+|> App.jsx
+
+<PrivateRoute>
+  <Component1 />
+  <Component2 />
+</PrivateRoute>
 ```
