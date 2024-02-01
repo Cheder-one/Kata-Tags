@@ -53,9 +53,7 @@ $ npx tsc --init
 }
 ```
 
-## _TS + React + Vite_
-
-### _Vite_
+## _Vite_
 
 ```
 npm init @vitejs/app my-react-app --template react-ts
@@ -90,7 +88,7 @@ export default defineConfig({
 
 [Полная статья](https://www.robinwieruch.de/vite-typescript/)
 
-### _tsconfig.json_
+## _tsconfig.json_
 
 ```
 bun install typescript @types/react @types/react-dom --save-dev
@@ -153,7 +151,24 @@ $ touch tsconfig.json tsconfig.node.json
 }
 ```
 
-### _Eslint_
+### _strict mode_
+
+```
+{
+  "compilerOptions": {
+    // Запрещает класть в переменную null без явного объявления
+    "strictNullChecks": true,
+    // Делает вызовы методов bind, call, apply строго типизированными
+    "strictBindCallApply": true,
+    // Делает более строгими типы функций
+    "strictFunctionTypes": true,
+    // Запрещает объявление непустого поля класса без инициализации
+    "strictPropertyInitialization": true,
+  },
+}
+```
+
+## _Eslint_
 
 ```
  module.exports = {
@@ -202,7 +217,7 @@ module.exports = {
 };
 ```
 
-### _Babel_
+## _Babel_
 
 ```
 $ bun install --save-dev @babel/preset-typescript
@@ -231,3 +246,4 @@ $ bun install --save-dev @babel/preset-typescript
   "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
 },
 ```
+
