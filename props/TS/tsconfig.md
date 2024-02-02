@@ -56,7 +56,9 @@ $ npx tsc --init
 ## _Vite_
 
 ```
-npm init @vitejs/app my-react-app --template react-ts
+$ npm init @vitejs/app --template react-ts
+$ bunx create-vite --template react-ts
+
 cd my-react-app
 
 bun vite-tsconfig-paths

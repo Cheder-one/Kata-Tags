@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/TypeScript/Блок 1. Внутреннее устройство TypeScript.md",
+                "file": "Blocks/TypeScript/Блок 2. React + TS.md",
                 "mode": "source",
                 "source": false
               }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/TypeScript/Блок 1. Внутреннее устройство TypeScript.md",
+                "file": "Blocks/TypeScript/Блок 2. React + TS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/TypeScript/Блок 1. Внутреннее устройство TypeScript.md",
+                "file": "Blocks/TypeScript/Блок 2. React + TS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/TypeScript/Блок 1. Внутреннее устройство TypeScript.md"
+                "file": "Blocks/TypeScript/Блок 2. React + TS.md"
               }
             }
           },
@@ -201,11 +201,13 @@
   },
   "active": "2c0c5c7f85769d17",
   "lastOpenFiles": [
-    "props/TS/tsconfig.md",
     "Blocks/TypeScript/Блок 1. Внутреннее устройство TypeScript.md",
+    "Blocks/TypeScript/Блок 2. React + TS.md",
+    "props/TS/Без названия 1.md",
+    "props/TS/Без названия.md",
+    "props/TS/tsconfig.md",
     "custom/tags.md",
     "Blocks/React Core/Блок 1. Основы React.md",
-    "props/TS/Без названия.md",
     "Blocks/React Core/Блок 3. Hooks + Redux.md",
     "props/React/RRD.md",
     "props/React/Redux.md",
@@ -228,8 +230,6 @@
     "props/JS/Image().md",
     "props/Web/псевдо/꞉класс/꞉nth-child().md",
     "props/Web/псевдо/꞉класс/꞉first-child & ꞉last-child.md",
-    "props/React/architecture.md",
-    "props/React/test.md",
     "assets/Pasted image 20240113162840.png",
     "assets/Pasted image 20240113162816.png",
     "assets/Pasted image 20240101013322.png",
