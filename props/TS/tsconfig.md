@@ -3,6 +3,11 @@
 $ npx tsc --init
 ```
 
+-> `Исключить файл из отслеживания в локальном репозитории`
+```
+git update-index --skip-worktree .gitignore
+```
+
 ```
 {
   "compilerOptions": {
