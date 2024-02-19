@@ -27,26 +27,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/Upgrade-v0/Блок 1. TypeScript.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd1cc09ce1f44b68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blocks/Upgrade-v0/Блок 3. Git.md",
+                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "new Date",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -112,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/Upgrade-v0/Блок 3. Git.md",
+                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/Upgrade-v0/Блок 3. Git.md",
+                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/Upgrade-v0/Блок 3. Git.md"
+                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md"
               }
             }
           },
@@ -199,28 +187,32 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "fd1cc09ce1f44b68",
+  "active": "47a4c31e0b08a63d",
   "lastOpenFiles": [
+    "Blocks/Upgrade_v1/Блок 2. React + TS.md",
+    "Blocks/Upgrade_v1/Блок 1. TypeScript.md",
+    "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
+    "Blocks/Upgrade_v1/Блок 3. Git.md",
+    "props/JS/new Date().md",
+    "Blocks/React Core/Блок 3. Redux + Hooks.md",
+    "props/React/Redux.md",
+    "assets/Pasted image 20240213121216.png",
+    "assets/Pasted image 20240213121150.png",
+    "assets/Pasted image 20240213121021.png",
     "assets/Pasted image 20240211224539.png",
     "assets/Pasted image 20240211223618.png",
     "assets/Pasted image 20240211223457.png",
     "assets/Pasted image 20240211223442.png",
-    "Blocks/Upgrade-v0/Блок 1. TypeScript.md",
-    "Blocks/Upgrade-v0/Блок 3. Git.md",
     "props/TS/tsconfig.md",
-    "Blocks/Upgrade-v0/Блок 4. RTK Query.md",
-    "Blocks/Upgrade-v0/Блок 2. React + TS.md",
     "custom/tags.md",
     "props/React/architecture.md",
     "props/React/gitflow.md",
     "props/TS/Без названия 1.md",
     "Blocks/React Core/Блок 1. Основы React.md",
-    "Blocks/React Core/Блок 3. Hooks + Redux.md",
     "props/React/RRD.md",
-    "props/React/Redux.md",
     "props/React/production mode.md",
     "props/TS",
-    "Blocks/Upgrade-v0",
+    "Blocks/Upgrade_v1",
     "props/React/emotion.md",
     "props/React/antd.md",
     "props/React/authorization & authentication.md",
@@ -235,11 +227,7 @@
     "Blocks/Web Core/Блок 1.4. Продвинутая стилизация.md",
     "assets/Pasted image 20240113162840.png",
     "assets/Pasted image 20240113162816.png",
-    "assets/Pasted image 20240101013322.png",
-    "assets/Pasted image 20231231184942.png",
-    "assets/Pasted image 20231231184911.png",
     "Blocks/React Core/Без названия",
-    "assets/Pasted image 20231215152116.png",
     "props/React",
     "Blocks/React Core",
     "геттер",

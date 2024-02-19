@@ -58,9 +58,20 @@ const milliseconds = date.getTime();
 console.log(milliseconds);
 ```
 
-### _new Date(null)_
+### _new Date().getTime()_
 
-`new Date(null)` -  вернёт количество миллисекунд, прошедшее с `01.01.1970`
+-> `Возвращает количество миллисекунд, прошедших с 1 января 1970 года`
+```
+new Date().getTime() /=/ 1708374071693
+```
+
+### _toLocaleString()_
+
+```
+new Date().toLocaleString("ru-RU", { timeZone: "Europe/Moscow" });
+
+/=/ '19.02.2024, 23:18:52'
+```
 
 ### _Вычислить разницу между датами_
 
