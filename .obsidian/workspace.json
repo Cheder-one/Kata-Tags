@@ -22,12 +22,24 @@
             }
           },
           {
+            "id": "b523f92feb089caa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blocks/Upgrade_v2/1. HTML.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "47a4c31e0b08a63d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
+                "file": "Blocks/Upgrade_v2/2. CSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "new Date",
+                "query": "role",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -100,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
+                "file": "Blocks/Upgrade_v2/1. HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
+                "file": "Blocks/Upgrade_v2/1. HTML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blocks/Upgrade_v1/Блок 4. RTK Query.md"
+                "file": "Blocks/Upgrade_v2/1. HTML.md"
               }
             }
           },
@@ -187,24 +199,36 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "47a4c31e0b08a63d",
+  "active": "b523f92feb089caa",
   "lastOpenFiles": [
-    "Blocks/Upgrade_v1/Блок 2. React + TS.md",
-    "Blocks/Upgrade_v1/Блок 1. TypeScript.md",
-    "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
+    "assets/Pasted image 20240226202841.png",
+    "assets/Pasted image 20240226202817.png",
+    "assets/Pasted image 20240226202105.png",
+    "assets/Pasted image 20240226201637.png",
+    "assets/Pasted image 20240226201553.png",
+    "Blocks/Upgrade_v2/2. CSS.md",
+    "custom/tags.md",
+    "Blocks/Upgrade_v2/1. HTML.md",
+    "Blocks/Web Core/Блок 1.3. Построение сеток + БЭМ именование.md",
+    "assets/Pasted image 20240226161806.png",
+    "props/JS/cookie.md",
+    "assets/Pasted image 20240226154835.png",
+    "assets/Pasted image 20240226154801.png",
+    "assets/Pasted image 20240226133430.png",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "assets/Pasted image 20240224212433.png",
+    "assets/Pasted image 20230906043734.png",
+    "Blocks/Upgrade_v2/0. Soft Skills.md",
     "Blocks/Upgrade_v1/Блок 3. Git.md",
+    "Blocks/Upgrade_v2",
+    "Blocks/Upgrade_v1/Блок 5. Testing.md",
+    "Blocks/Upgrade_v1/Блок 1. TypeScript.md",
+    "Blocks/Upgrade_v1/Блок 2. React + TS.md",
+    "Blocks/Upgrade_v1/Блок 4. RTK Query.md",
     "props/JS/new Date().md",
     "Blocks/React Core/Блок 3. Redux + Hooks.md",
     "props/React/Redux.md",
-    "assets/Pasted image 20240213121216.png",
-    "assets/Pasted image 20240213121150.png",
-    "assets/Pasted image 20240213121021.png",
-    "assets/Pasted image 20240211224539.png",
-    "assets/Pasted image 20240211223618.png",
-    "assets/Pasted image 20240211223457.png",
-    "assets/Pasted image 20240211223442.png",
     "props/TS/tsconfig.md",
-    "custom/tags.md",
     "props/React/architecture.md",
     "props/React/gitflow.md",
     "props/TS/Без названия 1.md",
@@ -216,24 +240,12 @@
     "props/React/emotion.md",
     "props/React/antd.md",
     "props/React/authorization & authentication.md",
-    "props/Web/reset css.md",
-    "props/React/react-hook-form.md",
-    "props/React/firebase & трансформеры данных.md",
-    "assets/3. common-registration.png",
-    "props/React/service pattern.md",
-    "props/React/customError.md",
-    "props/Web/saas .scss.md",
-    "Blocks/React Core/Блок 4..md",
-    "Blocks/Web Core/Блок 1.4. Продвинутая стилизация.md",
-    "assets/Pasted image 20240113162840.png",
-    "assets/Pasted image 20240113162816.png",
     "Blocks/React Core/Без названия",
     "props/React",
     "Blocks/React Core",
     "геттер",
     "assets/1699995728.656827.mp4",
     "assets/1699274459.0066094.mp4",
-    "Excalidraw",
-    "Blocks/JS Core/Блок 3. Обработка ошибок и асинхронность"
+    "Excalidraw"
   ]
 }
