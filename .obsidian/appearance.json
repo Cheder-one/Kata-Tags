@@ -1,9 +1,12 @@
 {
   "accentColor": "",
-  "baseFontSize": 15,
+  "baseFontSize": 16,
   "theme": "obsidian",
   "cssTheme": "",
   "textFontFamily": "",
   "monospaceFontFamily": "Fira Code",
-  "interfaceFontFamily": ""
+  "interfaceFontFamily": "",
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "baseFontSizeAction": false
 }
