@@ -8,17 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "88434c7be38f0e13",
+            "id": "039aa12024085bb5",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "custom/tags.md",
+                "file": "props/JS/HTTP.md",
                 "mode": "source",
                 "source": false
-              },
-              "pinned": true
+              }
             }
           },
           {
@@ -63,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "REST",
+                "query": "handsha",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -189,31 +187,32 @@
   },
   "active": "7f69c3ad03f59018",
   "lastOpenFiles": [
+    "props/JS/DNS.md",
+    "props/JS/HTTP.md",
+    "assets/Pasted image 20240303201409.png",
+    "assets/Pasted image 20240303201348.png",
+    "Blocks/Upgrade_v2/3. WEB.md",
+    "assets/Pasted image 20240303195135.png",
+    "assets/Pasted image 20240303195119.png",
     "custom/tags.md",
+    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
+    "assets/Pasted image 20240303173203.png",
+    "assets/Pasted image 20240303173122.png",
+    "assets/Pasted image 20240302173226.png",
+    "assets/Pasted image 20240302150257.png",
+    "assets/Pasted image 20240302150241.png",
+    "assets/Pasted image 20240302150213.png",
     "Blocks/Upgrade_v2/1. HTML.md",
     "Blocks/Upgrade_v2/2. CSS.md",
     "props/JS/REST API.md",
-    "Blocks/Upgrade_v2/3. WEB.md",
-    "assets/Pasted image 20240301214624.png",
-    "assets/Pasted image 20240301214536.png",
-    "props/JS/HTTP.md",
-    "assets/Pasted image 20240301164125.png",
     "props/Web/vendor prefixes.md",
     "props/Web/transform꞉ translate().md",
     "Blocks/Upgrade_v2/<!DOCTYPE html>.html",
     "props/Web/z-index.md",
     "props/Web/float.md",
     "props/Web/selector_specificity.md",
-    "assets/Pasted image 20240227123207.png",
-    "assets/Pasted image 20240226202841.png",
-    "assets/Pasted image 20240226202817.png",
-    "assets/Pasted image 20240226202105.png",
-    "assets/Pasted image 20240226201637.png",
-    "assets/Pasted image 20240226201553.png",
     "Blocks/Web Core/Блок 1.3. Построение сеток + БЭМ именование.md",
-    "assets/Pasted image 20240226161806.png",
     "props/JS/cookie.md",
-    "Blocks/JS Core/Блок 4. Browser API + HTTP.md",
     "Blocks/Upgrade_v2/0. Soft Skills.md",
     "Blocks/Upgrade_v1/Блок 3. Git.md",
     "Blocks/Upgrade_v2",
@@ -225,7 +224,6 @@
     "Blocks/React Core/Блок 3. Redux + Hooks.md",
     "props/React/Redux.md",
     "props/TS/tsconfig.md",
-    "props/React/architecture.md",
     "props/TS",
     "Blocks/Upgrade_v1",
     "Blocks/React Core/Без названия",
