@@ -156,7 +156,7 @@ document.cookie = "user=John; secure";
 
 Такая атака называется межсайтовая подделка запроса (или Cross-Site Request Forgery, XSRF).
 
-## _HttpOnly cookie_
+### _HttpOnly cookie_
 
 Определяет, `может` ли `JavaScript` `обращаться` к данному `куки`.
 
