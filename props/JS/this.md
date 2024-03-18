@@ -1,4 +1,4 @@
-Значение `this` – это о`кружающий контекст` в рамках которого будет происходить выполнение функции. 
+Значение `this` – это `окружающий контекст` в рамках которого будет происходить выполнение функции. 
 Это `объект` «перед точкой», который используется для вызова метода.
  
 - Ключевое слово `this` - дает доступ к `объекту` (`ссылается` на него), в контексте которого будет выполняется текущая функция.
@@ -181,9 +181,7 @@ ten.result(); /=/ 10
 ```
 
 Каждый метод `add` и `sub` создает новый объект `Calc`, который содержит результат операции, вместо того, чтобы изменять текущий объект. Это означает, что данный подход `не мутирует` один и тот же `объект`, а создает `новые объекты` для каждой операции.
-
----
-
+___
 ## _Потеря контекста_
 
 Потеря контекста при сохранении `референса функции` в `переменную`
@@ -255,18 +253,73 @@ user.sayHello(); // "Hello, John"
 ```
 
 **-> Не сработает:**
-
 ```
 const user = {
   name: "John",
   sayHello: () => {
-    return "Hello, " + user.name;
+    return "Hello, " + this.name;
   }
 };
 
 const boundFn = user.sayHello;
-boundFn(); /=/ Hello, John
+boundFn(); /=/ TypeError
 ```
 
 Стрелочные функции не имеют своего собственного контекста (`this`), они наследуют контекст родительской функции.
 В данном случае, так как `sayHello` является стрелочной функцией, она будет наследовать контекст глобального объекта, а не объекта `user`. Поэтому вызов `boundFn()` вернет `undefined`.
+___
+- `Arrow functon` наследует `контекст родительской` функции. 
+- Если `не находится в function`, то `делает вид что обернута` и которая вызывается в `глобальном контексте`.
+
+```
+console.log(this); // {}
+
+exports.default = {
+  name: "Ann",
+};
+
+console.log(this); // { default: { name: 'Ann' } }
+```
+
+```
+const user = {
+  name: "John",
+};
+
+function sayHello() {
+  /=/ function declaration ссылается на
+  /=/ контекст в котором была ВЫЗВАНА
+  
+	console.log(this); // { name: 'John' }
+
+  /=/ Arrow-func ссылается на 
+  /=/ контекст где она была ОПРЕДЕЛЕНА
+  const arrowFn = () => {
+    return "Hello, " + this.name;
+  };
+  return arrowFn();
+}
+
+console.log(sayHello.call(user)); // Hello, John
+
+/=/ Вызывается в контексте объекта user
+/=/ Как если бы у user был метод `user.sayHello()`
+```
+
+```
+function sayHello2() {
+  console.log(this); // Object [global]
+
+  const arrowFn = () => {
+    return "Hello, " + this.name;
+  };
+  return arrowFn();
+}
+
+console.log(sayHello2()); // Hello, undefined
+/=/ Вызывается неявно как `global.sayHello2()`
+/=/ Но тк у global нет свойства name, то undefined
+
+global.name = "myValue";
+console.log(sayHello2()); // Hello, myValue
+```

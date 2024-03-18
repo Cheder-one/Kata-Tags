@@ -54,7 +54,7 @@ function ITKamasutra() {}
 ITKamasutra.prototype === ITKamasutra.__proto__; /=/ false
 /=/ `ITKamasutra` создан от `прототипа` Function
 /=/ Следовательно в своем `ITKamasutra.__proto__` будет ссылаться на `Function.prototype`
-/=/ Function.prototype === ITKamasutra.__proto__; /=/ true
+Function.prototype === ITKamasutra.__proto__; /=/ true
 
 function ITIncubator() {}
 function ITKamasutra() {}
